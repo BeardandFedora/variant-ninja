@@ -468,8 +468,8 @@ function Variant() {
             e.forEach(function(a) {
                 -1 == d.indexOf(a) && (d += '<div class="vgh" vbp="' + a + '">' + a + "</div>")
             }), a = c.attr("icons"), "undefined" != typeof a && a !== !1 && (a = c.attr("icons").split(","), a.forEach(function(a) {
-                f += '<img class="vgj" src="img/' + a + '.png" />'
-            })), b += '<div class="vgl" vbp="' + $(this).attr("vbp") + '" vgv="' + $(this).attr("id") + '"><img delay-src="img/sections/' + $(this).attr("id") + '.jpg"/>' + f + '<span class="vjl">' + $(this).attr("vbr") + "</span></div>"
+                f += '<img class="vgj" src="builder/img/' + a + '.png" />'
+            })), b += '<div class="vgl" vbp="' + $(this).attr("vbp") + '" vgv="' + $(this).attr("id") + '"><img delay-src="builder/img/sections/' + $(this).attr("id") + '.jpg"/>' + f + '<span class="vjl">' + $(this).attr("vbr") + "</span></div>"
         }), a.html(b), c.append(d)
     }
 
@@ -821,7 +821,7 @@ function Variant() {
     function hb(a) {
         var b = $("<li>").addClass("vmv").attr("vmw", a.setName);
         a.css.length > 0 ? b.attr("vmo", a.css) : b.attr("vmo", "vir"), $(a.fonts).each(function() {
-            b.append($("<img>").attr("src", "img/fonts/" + T(this.fontName) + ".png"))
+            b.append($("<img>").attr("src", "builder/img/fonts/" + T(this.fontName) + ".png"))
         }), $(".vms").append(b)
     }
 

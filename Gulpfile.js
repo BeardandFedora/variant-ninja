@@ -14,6 +14,7 @@ var util = require('gulp-util');
 var clean = require('gulp-clean');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
+var inject = require('gulp-inject');
 var less = require('gulp-less');
 var replace = require('gulp-replace');
 var bump = require('gulp-bump');
@@ -134,6 +135,36 @@ gulp.task('copy-img', ['clean-img'], function() {
 	return gulp.src('./src/img/*')
 		// .pipe(debug())
         .pipe(gulp.dest('./public/img/'));
+});
+
+
+/** __________________________________________
+ * cache.manifest
+ */
+
+gulp.task('cache', function() {
+	return gulp.src('./public/cache.manifest')
+		.pipe(replace(/(#Date ).*/, '$1' + Date()))
+		.pipe(replace(/(#Version ).*/, '$1' + getVersion()))
+		.pipe(inject(gulp.src([
+				'./public/builder/**/*.*',
+				'./public/img/**/*.*',
+				'./public/fonts/**/*.*',
+				'./public/js/**/*.*',
+				'./public/video/**/*.*'
+			], {
+				read: false
+			}),
+			{
+				starttag: '# start_inject_resources',
+				endtag: '# end_inject_resources',
+				ignoreExtensions: true,
+				transform: function(filepath) {
+					return filepath.substring(1);
+				}
+			}))
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/'));
 });
 
 

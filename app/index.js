@@ -66,14 +66,19 @@ app.get('/virtual-labs-trial', function(req, res) {
 	res.renderDebug('material-free-trial.html');
 });
 
-// Serve landing.html in /
+// Serve privacy.html in /privacy
 app.get('/privacy', function(req, res) {
 	res.renderDebug('privacy.html');
 });
 
-// Serve landing.html in /
+// Serve terms.html in /terms
 app.get('/terms', function(req, res) {
 	res.renderDebug('terms.html');
+});
+
+// Serve builder.html in /builder
+app.get('/build', function(req, res) {
+	res.renderDebug('builder.html');
 });
 
 /* ***********
