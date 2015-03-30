@@ -1,0 +1,17 @@
+/* Transform Animation */
+.intro.transformed .logo {
+	-webkit-transform: translate(-75%, -40%);
+					transform: translate(-75%, -40%);
+}
+.intro.transformed .logo img {
+	max-width: 96px;
+}
+.intro.transformed .phone {
+	-webkit-transform: translateY(-68%) scale(0.8);
+					transform: translateY(-68%) scale(0.8);
+}
+.intro.transformed .intro-features .icon-block {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+					transform: translateX(0);
+}
