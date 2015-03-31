@@ -8,6 +8,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var multer = require('multer');
 
 
 /* It's not quite Project Metosis, but this is going to allow us to
@@ -81,6 +82,23 @@ app.get('/build', function(req, res) {
 	res.renderDebug('builder.html');
 });
 
+
+// Upload route handler
+app.post("/upload", function(req, res, next){ 
+	if (req.files) { 
+		console.log(util.inspect(req.files));
+		if (req.files.myFile.size === 0) {
+		            return next(new Error("Please select a file."));
+		}
+		fs.exists(req.files.myFile.path, function(exists) { 
+			if(exists) { 
+				res.end("We uploaded your landing page!"); 
+			} else { 
+				res.end("Well, there is no magic for those who don’t believe in it!"); 
+			} 
+		}); 
+	} 
+});
 /* ***********
  * Error Pages
  * ***********
@@ -118,7 +136,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(multer({
+	dest: __dirname + '/../views/', // this is where new pages are uploaded via Multer
+	rename: function (fieldname, filename) {
+    	return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
+  	}
+	onFileUploadStart: function (file, req, res) {
+  		console.log(file.fieldname + ' is starting to upload...')
+	},
+	onFileUploadComplete: function (file, req, res) {
+  		console.log(file.fieldname + ' uploaded to  ' + file.path)
+	},
+	onFilesLimit: function () {
+  		console.log('You crossed the file limit! Are you adding an HTML file?')
+	}
+})); 
 
 
 // catch 404 and forward to error handler

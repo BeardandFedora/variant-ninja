@@ -16,7 +16,6 @@
         <link href="builder/theme/css/icons.min.css" rel="stylesheet" type="text/css" media="all">
         <link href="builder/theme/css/flexslider.min.css" rel="stylesheet" type="text/css" media="all">
         <link href="builder/theme/css/theme.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
         <style>
         	nav.fixed, nav.overlay{ left: 48px; }
@@ -225,7 +224,9 @@
 							<div class="vdq">
 								<span class="vhq">Get HTML</span>
 							</div>		
-							
+							<div class="vhs upload vaj vhq" style="margin-left: 6px">Upload</div>
+							<div class="vhs download vaj vil vgy" style="margin-left: 6px">Download</div>
+
 						</div>
 					
 						
@@ -260,6 +261,8 @@
 							<div class="vdq">
 								<span class="vhq">Get HTML</span>
 							</div>
+							<div class="vhs upload vaj vhq" style="margin-left: 6px">Upload</div>
+							<div class="vhs download vaj vil vgy" style="margin-left: 6px">Download</div>
 							
 						</div>
 					
@@ -523,12 +526,48 @@
 			</div>
 			
 			<div class="vjp">
-				<div class="vhs vgn vaj vil">Select All</div>
+				<div class="vhs vgn vaj vil hidden">Select All</div>
 				<div class="vhs vgy vaj vil">Download HTML file</div>
 				<div class="vhs vex vak vix">Done</div>
 			</div>
 			
 		</div>
+
+		<div class="upload-modal vin">
+			<div class="vfa">
+				<span class="vjl vbk"> Upload HTML File To Server</span>
+				<i class="variant-icon variant-close-circle vex"></i>
+			</div>
+			
+			<div class="vew">
+    <div style="position:relative;">
+        <form action="/upload" enctype="multipart/form-data" method="post">
+            <p>
+                Page URL (No Spaces - <strong>my-landing-page</strong>):
+                <br>
+                <input type="text" name="page_name" size="35" class="validate-required validate-url"> .html
+
+            </p>
+            <p>
+                Please update the newly created landing page (the .html file):
+                <br>
+
+                <a class='btn btn-primary btn-block btn-filled' href='javascript:;'>
+                    Select Your File
+					<input type="file" style='position:absolute;z-index:2;top:114px;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40" onchange='$("#upload-file-info").html($(this).val());'>
+                </a>
+			</p>
+		</form>
+    </div>
+
+			</div>
+			
+			<div class="vjp">
+				<div class="vhs vex val vil">Cancel</div>
+				<input type="submit" label="Upload" name="Upload" class="vhs upload-file vaj vil">
+			</div>
+			
+		</div>	
 		
 		<div class="global-vfr vin vkf">
 			<img alt="Logo" src="builder/img/full-logo.png">
@@ -604,7 +643,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h1 class="text-white">Better landing pages</h1>
-					<h5 class="text-white">Launchkit is the simplest way to build landing pages.</h5>
+					<h5 class="text-white">Variant is the simplest way to build landing pages.</h5>
 				</div>
 			</div>
 		</div>
@@ -627,7 +666,7 @@
 				<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 				<input type="submit" value="Start your free trial »">
 				<p class="sub">
-					* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+					* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 				</p>
 				<div class="form-error">
 					<span>Please fill all fields correctly</span>
@@ -655,7 +694,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 text-center">
-								<h1 class="text-white">Build stylish landing pages in <br>minutes with Launchkit</h1>
+								<h1 class="text-white">Build stylish landing pages in <br>minutes with Variant</h1>
 							</div>
 						</div>
 					</div>
@@ -676,7 +715,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h1 class="text-white">Create <em>Better</em> Landing Pages.</h1>
-					<h5>Launchkit is a complete landing page solution with unlimited possibilities.</h5>
+					<h5>Variant is a complete landing page solution with unlimited possibilities.</h5>
 				</div>
 			</div>
 		
@@ -704,7 +743,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 								<span>Please fill all fields correctly</span>
@@ -733,7 +772,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h1 class="text-white">Create <em>Better</em> Landing Pages.</h1>
-					<h5>Launchkit is a complete landing page solution with unlimited possibilities.</h5>
+					<h5>Variant is a complete landing page solution with unlimited possibilities.</h5>
 				</div>
 			</div>
 		
@@ -753,7 +792,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 								<span>Please fill all fields correctly</span>
@@ -799,8 +838,8 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h3>Landing pages with style</h3>
-					<h5>Launchkit is a flexible landing page template designed for everyone.</h5>
-					<a class="btn btn-filled super-action" href="#purchase-template">Buy Launchkit</a>
+					<h5>Variant is a flexible landing page template designed for everyone.</h5>
+					<a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
 				</div>
 			</div>
 		</div>
@@ -830,15 +869,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-7 col-md-push-7 col-sm-push-5">
-					<h3>Stylish landing pages<br> without the fuss.</h3>
-					<p>Build your next landing page in minutes<br> with Launchkit and Variant.</p>
+					<h3>Smart landing pages<br> without the fuss.</h3>
+					<p>Build a next landing page in minutes<br> with Variant.</p>
 					<form class="form-email" method="post">
 						<h6>Free 30 day trial - no credit card required</h6>
 						<input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out<br> our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out<br> our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -863,7 +902,7 @@
 				<div class="row">
 					<div class="col-sm-12 text-center">
 						<h2 class="text-white">Design, Share, <strong>Inspire.</strong></h2>
-						<h5 class="text-white">Build stylish landing pages in minutes with Launchkit</h5>
+						<h5 class="text-white">Build smart landing pages in minutes with Variant</h5>
 					</div>
 				</div>
 			
@@ -882,7 +921,7 @@
 						<h4>Build stylish landing pages in minutes</h4>
 						<a class="btn" href="#">Take A Tour</a>
 						<h6>or</h6>
-						<a class="btn btn-filled" href="#purchase-template">Buy Launchkit</a>
+						<a class="btn btn-filled" href="#purchase-template">Buy Labster</a>
 					</div>
 				</div>
 			</div>
@@ -908,7 +947,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -943,9 +982,9 @@
 		<div class="container">
 			<div class="row v-align-children">
 				<div class="col-md-6">
-					<h3 class="text-white">Build stylish landing pages in minutes with Launchkit.</h3>
+					<h3 class="text-white">Build smart landing pages in minutes with Variant.</h3>
 					<h5 class="text-white">
-						Launchkit allows you to assemble beautiful, multi-purpose landing pages in a matter of minutes.
+						Variant allows Labster to assemble beautiful, multi-purpose landing pages in a matter of minutes.
 					</h5>
 				</div>
 			
@@ -961,7 +1000,7 @@
 							<li>
 								<i class="text-white icon-brush-paint-streamline"></i>
 								<p class="text-white">
-									Tons of content blocks to give your landing page a unique and distinct look.
+									Tons of content blocks to give our landing page a unique and distinct look.
 								</p>
 							</li>
 						</ul>
@@ -970,7 +1009,7 @@
 							<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 							<input type="submit" value="Start your free trial »">
 							<p class="sub">
-								* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+								* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 							</p>
 							<div class="form-error">
 								<span>Please fill all fields correctly</span>
@@ -1007,7 +1046,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h3 class="text-white">Build stylish landing pages fast with Labster's Launchkit</h3>
+					<h3 class="text-white">Build stylish landing pages fast with Labster's Variant</h3>
 					<h5 class="text-white">A complete landing page solution for Labster campaigns.</h5>
 					<form class="contained-form form-email" method="post">
 						<h6 class="text-white">Sign up now for a free 30 day trial</h6>
@@ -1015,7 +1054,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -1085,7 +1124,8 @@
 				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
 					<h3>Showcase your product's features</h3>
 					<p class="lead">
-						Launchkit fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
+						Variant fuses the traditional landing page with stylish, modern web design. 
+						Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for Labster.
 					</p>
 				</div>
 			</div>
@@ -1098,8 +1138,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-					<h4>Launchkit is a neat, feature-rich landing page template designed to showcase your product or service in style.</h4>
-					<p>With multiple options for all sections - Launchkit has the right stuff for your next landing page.</p>
+					<h4>Variant is a neat, feature-rich landing page template designed to showcase your product or service in style.</h4>
+					<p>With multiple options for all sections - Variant has the right stuff for your next landing page.</p>
 				</div>
 			</div>
 		
@@ -1138,7 +1178,7 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
 					<h3>Build stylish landing pages fast.</h3>
-					<p>With multiple options for all sections - Launchkit has the right stuff for your next landing page.</p>
+					<p>With multiple options for all sections - Variant has the right stuff for your next landing page.</p>
 				</div>
 			</div>
 		
@@ -1271,9 +1311,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center">
-					<h6>What makes Launchkit unique?</h6>
+					<h6>What makes Variant unique?</h6>
 					<h4>
-						Launchkit is a complete landing page solution for <br>products and services. Combine different blocks to suit <br>your style and purpose - it’s as simple as click and edit.
+						Variant is a complete landing page solution for <br>Labster. 
+						Combine different blocks to suit <br>the style and purpose - it’s as simple as click and edit.
 					</h4>
 					<a href="#" class="btn">Learn More »</a>
 				</div>
@@ -1364,7 +1405,7 @@
 							<div class="col-sm-12 col-md-8 col-md-offset-2 text-center">
 								<h1 class="text-white">Intuitive Page Builder</h1>
 								<p class="lead text-white">
-									Launchkit fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
+									Variant fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
 								</p>
 							</div>
 						</div>
@@ -1381,7 +1422,7 @@
 							<div class="col-sm-12 col-md-8 col-md-offset-2 text-center">
 								<h1 class="text-white">Flexible Blocks</h1>
 								<p class="lead text-white">
-									Launchkit fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
+									Variant fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
 								</p>
 							</div>
 						</div>
@@ -1398,7 +1439,7 @@
 							<div class="col-sm-12 col-md-8 col-md-offset-2 text-center">
 								<h1 class="text-white">Awesome Support</h1>
 								<p class="lead text-white">
-									Launchkit fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
+									Variant fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for today's products and services.
 								</p>
 							</div>
 						</div>
@@ -1464,8 +1505,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-					<h4>Launchkit is a neat, feature-rich landing page template designed to showcase your product or service in style.</h4>
-					<p>With multiple options for all sections - Launchkit has the right stuff for your next landing page.</p>
+					<h4>Variant is a neat, feature-rich landing page builder designed to showcase Labster in style.</h4>
+					<p>With multiple options for all sections - Variant has the right stuff for your next landing page.</p>
 				</div>
 			</div>
 		
@@ -1593,9 +1634,9 @@
 				<div class="col-md-6 col-sm-6">
 					<h4>Build smart, effective landing<br> pages in minutes.</h4>
 					<p class="lead">
-						Launchkit is a complete landing page solution for products and services. Combine different blocks to suit your style and purpose - it’s as simple click and edit.
+						Variant is a complete landing page solution for Labster. Combine different blocks to suit your style and purpose - it’s as simple click and edit.
 					</p>
-					<a class="btn btn-filled super-action" href="#">Buy Launchkit</a>
+					<a class="btn btn-filled super-action" href="#">Buy Labster</a>
 				</div>
 			
 				<div class="col-md-6 col-sm-6">
@@ -1706,7 +1747,7 @@
 							<div class="tab-content">
 								<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
 									<img alt="Image" src="/img/tab1.jpg">
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1725,7 +1766,7 @@
 									<div class="embed-video-container">
 										<iframe no-src="https://www.youtube.com/embed/ROZhrRm88ms?modestbranding=1&showinfo=0"></iframe>
 									</div>		
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1756,7 +1797,7 @@
 											</li>
 										</ul>
 									</div>
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1773,7 +1814,7 @@
 							<div class="tab-content">
 								<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
 									<img alt="Image" src="/img/tab4.jpg">
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1806,7 +1847,7 @@
 							<div class="tab-content">
 								<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
 									<img alt="Image" src="/img/tab1.jpg">
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1823,7 +1864,7 @@
 									<div class="embed-video-container">
 										<iframe no-src="https://www.youtube.com/embed/ROZhrRm88ms?modestbranding=1&showinfo=0"></iframe>
 									</div>		
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1852,7 +1893,7 @@
 											</li>
 										</ul>
 									</div>
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -1867,7 +1908,7 @@
 							<div class="tab-content">
 								<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
 									<img alt="Image" src="/img/tab4.jpg">
-									<h5>Increase Conversions with Launchkit</h5>
+									<h5>Increase Conversions with Variant</h5>
 									<p>
 										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 									</p>
@@ -2173,7 +2214,7 @@
 						<div class="inner">
 							<h6>Flexible Elements</h6>
 							<p>
-								With many options for each section type - Launchkit is extremely flexible.  
+								With many options for each section type - Variant is extremely flexible.  
 							</p>
 						</div>
 					</div>
@@ -2183,7 +2224,7 @@
 						<div class="inner">
 							<h6>Responsive Design</h6>
 							<p>
-								Built on the Bootstrap 3 framework = Launchkit is responsive out of the box.
+								Built on the Bootstrap 3 framework = Variant is responsive out of the box.
 							</p>
 						</div>
 					</div>
@@ -2199,7 +2240,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h2>Build yours now.</h2>
-					<a class="btn btn-filled super-action" href="#purchase-template">Buy Launchkit</a>
+					<a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
 					<p class="sub">By continuting you agree to our<br><a href="#">Terms of Use</a></p>
 				</div>
 			</div>
@@ -2220,7 +2261,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -2245,9 +2286,9 @@
 				<div class="col-sm-4 col-md-5 text-left">
 					<h3>Build a landing<br> page in minutes.</h3>
 					<p>
-						“Purchasing Launchkit was the easiest decision I’ve ever had to make. The sheer flexibility of the builder was what sold it for me.”
+						“Purchasing Labster was the easiest decision I’ve ever had to make. The sheer flexibility of the labs was what sold it for me.”
 					</p>
-					<span>— James Hillier, Labster</span>
+					<span>— James Hillier, Labster student</span>
 				</div>
 			
 				<div class="col-md-5 col-sm-8">
@@ -2257,7 +2298,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -2291,8 +2332,8 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h3>You're in good company</h3>
-					<h5>Join thousands of satisfied customers using Launchkit globally.</h5>
-					<a class="btn btn-filled super-action" href="#purchase-template">Buy Launchkit</a>
+					<h5>Join thousands of satisfied customers using Labster globally.</h5>
+					<a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
 					<p class="sub">By continuting you agree to our<br><a href="#">Terms of Use</a></p>
 				</div>	
 			</div>
@@ -2311,7 +2352,7 @@
 				<div class="col-sm-12 text-center">
 					<h2 class="text-white">Build better landing pages</h2>
 					<h5 class="text-white">Start today with a free 30 day trial - No credit card required.</h5>
-					<a class="btn btn-filled super-action" href="#purchase-template">Buy Launchkit</a>
+					<a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
 					<p class="sub">By continuting you agree to our<br><a href="#">Terms of Use</a></p>
 				</div>
 			</div>
@@ -2347,7 +2388,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<h2 class="text-white">Better landing pages - No fuss.</h2>
-					<h5 class="text-white">Launchkit makes assembling high quality landing pages utterly simple.</h5>
+					<h5 class="text-white">Variant makes assembling high quality landing pages utterly simple.</h5>
 				</div>
 			</div>
 		
@@ -2359,7 +2400,7 @@
 						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
 						<input type="submit" value="Start your free trial »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -2382,7 +2423,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h4>Launchkit empowers you to build <em>better</em> landing pages.</h4>
+					<h4>Variant empowers you to build <em>better</em> landing pages.</h4>
 					<a class="btn" href="#">More Info</a>
 					<a class="btn btn-filled" href="#">Join Now</a>
 				</div>
@@ -2415,7 +2456,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<a class="btn btn-filled super-action" href="#purchase-template">Purchase Launchkit</a>
+					<a class="btn btn-filled super-action" href="#purchase-template">Purchase Labster</a>
 				</div>
 			</div>
 		</div>
@@ -2451,40 +2492,40 @@
 				<div class="col-sm-6 text-center testimonial">
 					<span class="comma">“</span>
 					<h4>
-						Launchkit enabled us to get our landing page live in under a day. <br>It was a pure joy to use.
+						Variant enabled us to get our landing page live in under a day. <br>It was a pure joy to use.
 					</h4>
 					<p>
-						— James Hillier, Labster
+						— Joel Serino, Labster
 					</p>
 				</div>
 			
 				<div class="col-sm-6 text-center testimonial">
 					<span class="comma">“</span>
 					<h4>
-						The guys have created a truly <br>special product here - Finally a<br> builder that delivers!
+						The guys have created a truly <br>special product here - Finally a<br> builder that delivers results!
 					</h4>
 					<p>
-						— Jon Hopkins, Immunity
+						— Jon Hopkins, Labster
 					</p>
 				</div>
 			
 				<div class="col-sm-6 text-center testimonial">
 					<span class="comma">“</span>
 					<h4>
-						We now have a go-to solution <br>for our client’s landing pages.<br> We love the flexibility
+						We now have a go-to solution <br>for our science labs.<br> We love the flexibility!
 					</h4>
 					<p>
-						— Will Saul, CLOSE
+						— Will Saul, Labster
 					</p>
 				</div>
 			
 				<div class="col-sm-6 text-center testimonial">
 					<span class="comma">“</span>
 					<h4>
-						What's that? You need a landing<br> page in under an hour?<br> Launchkit's got your covered.
+						What's that? You need a landing<br> page in under an hour?<br> Variant's got your covered.
 					</h4>
 					<p>
-						— Peter Van Hoesen - Life Performance
+						— Peter Van Hoesen - Labster
 					</p>
 				</div>
 			</div>
@@ -2497,7 +2538,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h4>Hear what others think of Launchkit</h4>
+					<h4>Hear what others think of Labster</h4>
 				</div>
 			</div>
 		
@@ -2541,28 +2582,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h6>Kind words from current Launchkit users</h6>
+					<h6>Kind words from current Labster users</h6>
 				</div>
 			</div>
 		
 			<div class="row">
 				<div class="col-sm-6 text-center testimonial">
 					<p class="lead">
-						“This is the first template I’ve used from Labster and can happily report complete and utter elation. I built our landing page in around an hour and it looks super stylish.”
+						“This is the first lab I’ve used from Labster and can happily report complete and utter elation. ”
 					</p>
 					<img alt="Avatar" src="/img/avatar-1.png">
 					<p>
-						<em>— Jon Hopkins, Immunity</em>
+						<em>— Jon Hopkins, Student</em>
 					</p>
 				</div>
 			
 				<div class="col-sm-6 text-center testimonial">
 					<p class="lead">
-						“I knew from the moment I saw the demos that this was a different kind of beast. Well I was right, Launchkit is the  single most enjoyable template I’ve used = and believe me,  I’ve used plenty.
+						“I knew from the moment I saw the demos that this was a different kind of beast. Well I was right, Labster is the single most enjoyable online course I’ve used = and believe me,  I’ve used plenty.
 					</p>
 					<img alt="Avatar" src="/img/avatar-2.png">
 					<p>
-						<em>— Will Saul, CLOSE</em>
+						<em>— Will Saul, Student</em>
 					</p>
 				</div>
 			</div>
@@ -2578,10 +2619,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-								<h4>“Look no further - the future of landing pages has arrived - Viva Launchkit!”</h4>
+								<h4>“Look no further - the future of education has arrived - Viva Labster!”</h4>
 								<img alt="Avatar" src="/img/avatar-3.png">
 								<p>
-									<em>— Jesse Ware, Devotion</em>
+									<em>— Jesse Ware, Professor</em>
 								</p>
 							</div>
 						</div>
@@ -2592,10 +2633,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-								<h4>“Launchkit is by far the easiest template I've had the pleasure of working with.”</h4>
+								<h4>“Labster is by far the easiest online course I've had the pleasure of working with.”</h4>
 								<img alt="Avatar" src="/img/avatar-1.png">
 								<p>
-									<em>— Jon Hopkins, Immunity</em>
+									<em>— Jon Hopkins, Professor</em>
 								</p>
 							</div>
 						</div>
@@ -2606,10 +2647,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-								<h4>“I just created my landing page in under an hour - I didn't even need to touch the code!”</h4>
+								<h4>“I just created my course in under an day - I didn't even need to touch the code!”</h4>
 								<img alt="Avatar" src="/img/avatar-2.png">
 								<p>
-									<em>— Will Saul, CLOSE</em>
+									<em>— Will Saul, Professor</em>
 								</p>
 							</div>
 						</div>
@@ -2629,12 +2670,12 @@
 				</div>
 			
 				<div class="col-md-5 col-sm-6">
-					<h4>Kind words from current Launchkit customers</h4>
+					<h4>Kind words from current Labster customers</h4>
 					<div class="slider">
 						<ul class="slides">
 							<li>
 								<p>
-									“Wow - what an amazing product. I’m so glad to have found Launchkit. Our landing page looks slick, stylish and we’re already seeing promising results.”
+									“Wow - what an amazing product. I’m so glad to have found Labster. ”
 								</p>
 								<p>
 									<em>— Jesse Ware, Devotion</em>
@@ -2643,7 +2684,7 @@
 					
 							<li>
 								<p>
-									“Using Launchkit I was able to make our landing page faster than it would usually take to get a WordPress theme installed. The page builder seriously rocks.”
+									“Using Labster I was able to make our students pass exams faster than it would usually take to get a get an A+.”
 								</p>
 								<p>
 									<em>— Carl Craig, At Les</em>
@@ -2652,7 +2693,7 @@
 					
 							<li>
 								<p>
-									“Just a complete joy to work with. I am often skeptical about page builders but this one produced only clean, valid code. It's Variant or the highway from now on.”
+									“Just a complete joy to work with. I am often skeptical about online courses and virtual labs, but this did it for me!”
 								</p>
 								<p>
 									<em>— Guy Gerber, Moon Blur</em>
@@ -2671,7 +2712,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h4>Follow <a href="#">@labster-logo-30web</a> for updates</h4>
+					<h4>Follow <a href="#">@labster</a> for updates</h4>
 				</div>
 			</div>
 			
@@ -2783,7 +2824,7 @@
 						<textarea rows="4" name="message" class="validate-required" placeholder="Your Message"></textarea>
 						<input type="submit" value="Submit Enquiry »">
 						<p class="sub">
-							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+							* We don’t share your personal info with anyone. Check out our <a href="privacy"> Privacy Policy</a> for more information.
 						</p>
 						<div class="form-error">
 							<span>Please fill all fields correctly</span>
@@ -2807,48 +2848,36 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="faq">
-						<h5>Is Launchkit a WordPress theme?</h5>
+						<h5>Is Variant a theme?</h5>
 						<p>
-							No, Launchkit is an HTML template and HTML Page Builder all-in-one. This means there are is no CMS to install and no  database to manage. All content is controlled via the browser based page builder dealing purely in HTML.
+							No, Variant is an HTML template and HTML Page Builder all-in-one. This means there are is no CMS to install and no database to manage. All content is controlled via the browser based page builder dealing purely in HTML.
 						</p>
 					</div>
 			
-					<div class="faq">
-						<h5>Will there be a Launchkit for WordPress?</h5>
-						<p>
-							There will likely be a WordPress version of Launchkit in the near future. While we don't have an exact date - stay tuned for updates and we'll let you know when the WP version is ready. 
-						</p>
-					</div>
 			
 					<div class="faq">
 						<h5>How many landing pages can I create?</h5>
 						<p>
-							You may create as many pages as you like per single project. This means that if you plan to use Launchkit for another project, you will need to purchase an additional standard license.
+							You may create as many pages as you like per single project. 
 						</p>
 					</div>
 				</div>
 			
 				<div class="col-sm-6">
 					<div class="faq">
-						<h5>Do you provide support for Launchkit?</h5>
+						<h5>Do you provide support for Variant?</h5>
 						<p>
-							Yes - Labster provides support for Launchkit via our dedicated support forum at <a target="_blank" href="https://mediulabster-logo-30.ticksy.com">mediulabster-logo-30.ticksy.com</a>. This includes general item support but not additional customisation services.
+							Yes - Labster provides support for Variant via our dedicated support forum at <a target="_blank" href="https://mediulabster-logo-30.ticksy.com">mediulabster-logo-30.ticksy.com</a>. This includes general item support but not additional customisation services.
 						</p>
 					</div>
 			
-					<div class="faq">
-						<h5>Are PSD files included in the download?</h5>
-						<p>
-							While the PSD files are not included in the download package from Envato (due to file-size), you can contact us via our support forum at <a target="_blank" href="https://mediulabster-logo-30.ticksy.com">mediulabster-logo-30.ticksy.com</a> and we will happily provide them for you.
-						</p>
-					</div>
 				</div>
 			
 			</div>
 		
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h4>Still have questions? Tweet <a target="_blank" href="https://twitter.com/labster-logo-30web">@labster-logo-30web</a> for answers</h4>
+					<h4>Still have questions? Tweet <a target="_blank" href="https://twitter.com/labster">@labster</a> for answers</h4>
 				</div>
 			</div>
 		</div>
@@ -3540,7 +3569,7 @@
 			{
 				"original":
 				{
-					"name":"Labster Launchkit",
+					"name":"Labster Variant",
 					"pathToOriginal":"mixture/public/css/less/",
 					"originalFileName":"theme",
 					"colours":["#6dc77a"]
@@ -3930,6 +3959,7 @@
         				requestAnimationFrame(variantFixedHeader);
         			});
         		}
+					
         	});
         	
         	function variantFixedHeader(){
@@ -3968,7 +3998,33 @@
 		<script src="builder/js/jsZip.js"></script>
 		<script src="builder/js/saveAs.js"></script>
 		<script src="builder/js/init.js"></script>
-		
+        <script type="text/javascript">
+        	$(document).ready(function(){
+	// added by joel.serino on 31 March 2015
+	$('.upload').click(function (e) {
+		e.preventDefault();
+		$('.upload-modal').modal({
+            autoResize: !0,
+            overlayClose: !0,
+            opacity: 0,
+            overlayCss: {
+                "background-color": "#3e3e3e"
+            },
+            closeClass: "vex",
+            onShow: function() {
+                setTimeout(function() {
+                    $(".simplemodal-container").addClass("vko"), $(".simplemodal-overlay").addClass("vko")
+                }, 100), b()
+            },
+            onClose: function() {
+                setTimeout(function() {
+                    $.modal.close(), b()
+                }, 300), $(".simplemodal-container").removeClass("vko"), $(".simplemodal-overlay").removeClass("vko")
+            }
+        });
+    });
+    });
+		</script>
 		
 	</body>
 </html>

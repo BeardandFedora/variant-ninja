@@ -843,7 +843,7 @@ function Variant() {
     }
 
     function kb(a) {
-        $("head").append('<link class="viw" href="theme/css/' + a + '" rel="alternate stylesheet" type="text/css" media="all">')
+        $("head").append('<link class="viw" href="builder/theme/css/' + a + '" rel="alternate stylesheet" type="text/css" media="all">')
     }
 
     function lb() {

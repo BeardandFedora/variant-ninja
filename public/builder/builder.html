@@ -523,12 +523,50 @@
 			</div>
 			
 			<div class="vjp">
-				<div class="vhs vgn vaj vil">Select All</div>
-				<div class="vhs vgy vaj vil">Download HTML file</div>
+				<div class="vhs vgn vaj vil hidden">Select All</div>
+				<div class="vhs vgy vaj vil">1. Download HTML file</div>
+				<div class="vhs upload-modal vaj vil">2. Upload HTML to Server</div>
 				<div class="vhs vex vak vix">Done</div>
 			</div>
 			
 		</div>
+
+		<div class="upload vin">
+			<div class="vfa">
+				<span class="vjl vbk"> Upload HTML File To Server</span>
+				<i class="variant-icon variant-close-circle vex"></i>
+			</div>
+			
+			<div class="vew">
+    <div style="position:relative;">
+        <form action="/upload" enctype="multipart/form-data" method="post">
+            <p>
+                Name The File:
+                <br>
+                <input type="url" name="page_name" size="30">
+
+            </p>
+            <p>
+                Please update the newly created landing page (the .html file):
+                <br>
+
+                <a class='btn btn-primary' href='javascript:;'>
+                    <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40" onchange='$("#upload-file-info").html($(this).val());'>
+                </a>
+                &nbsp;
+                <span class='label label-info' id="upload-file-info"></span>
+			</p>
+		</form>
+    </div>
+
+			</div>
+			
+			<div class="vjp">
+				<div class="vhs vex val vil">Cancel</div>
+				<div class="vhs upload-file vaj vil">Upload</div>
+			</div>
+			
+		</div>		
 		
 		<div class="global-vfr vin vkf">
 			<img alt="Logo" src="img/full-logo.png">

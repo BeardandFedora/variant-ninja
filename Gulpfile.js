@@ -147,13 +147,14 @@ gulp.task('cache', function() {
 		.pipe(replace(/(#Date ).*/, '$1' + Date()))
 		.pipe(replace(/(#Version ).*/, '$1' + getVersion()))
 		.pipe(inject(gulp.src([
-				'./public/builder/**/*.*',
-				'./public/img/**/*.*',
-				'./public/fonts/**/*.*',
-				'./public/js/**/*.*',
-				'./public/video/**/*.*'
+				'./builder/**/*.*',
+				'./img/**/*.*',
+				'./fonts/**/*.*',
+				'./js/**/*.*',
+				'./video/**/*.*'
 			], {
-				read: false
+				read: false,
+				cwd: './public'
 			}),
 			{
 				starttag: '# start_inject_resources',
