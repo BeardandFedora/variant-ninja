@@ -62,6 +62,11 @@ app.get('/', function(req, res) {
 	res.renderDebug('material-free-trial.html');
 });
 
+// Serve learn-life-sciences.html in /
+app.get('/learn-life-sciences', function(req, res) {
+	res.renderDebug('learn-life-sciences.html');
+});
+
 // Serve material-free-trial.html in /
 app.get('/virtual-labs-trial', function(req, res) {
 	res.renderDebug('material-free-trial.html');
@@ -140,7 +145,7 @@ app.use(multer({
 	dest: __dirname + '/../views/', // this is where new pages are uploaded via Multer
 	rename: function (fieldname, filename) {
     	return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
-  	}
+  	},
 	onFileUploadStart: function (file, req, res) {
   		console.log(file.fieldname + ' is starting to upload...')
 	},
