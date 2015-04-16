@@ -59,7 +59,12 @@ app.use(function(req, res, next) {
 
 // Serve landing.html in /
 app.get('/', function(req, res) {
-	res.renderDebug('material-free-trial.html');
+	res.renderDebug('builder.html');
+});
+
+// Serve learn-life-sciences.html in /
+app.get('/campaigns', function(req, res) {
+	res.renderDebug('campaigns.html');
 });
 
 // Serve learn-life-sciences.html in /
@@ -87,6 +92,28 @@ app.get('/build', function(req, res) {
 	res.renderDebug('builder.html');
 });
 
+// Serve examples/
+app.get('/multi', function(req, res) {
+	res.renderDebug('examples/multi.html');
+});
+app.get('/adventure', function(req, res) {
+	res.renderDebug('examples/adventure.html');
+});
+app.get('/agency', function(req, res) {
+	res.renderDebug('examples/agency.html');
+});
+app.get('/fitness', function(req, res) {
+	res.renderDebug('examples/fitness.html');
+});
+app.get('/cater', function(req, res) {
+	res.renderDebug('examples/cater.html');
+});
+app.get('/learn', function(req, res) {
+	res.renderDebug('examples/learn.html');
+});
+app.get('/news', function(req, res) {
+	res.renderDebug('examples/news.html');
+});
 
 // Upload route handler
 app.post("/upload", function(req, res, next){ 

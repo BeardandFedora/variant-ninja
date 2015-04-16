@@ -292,7 +292,7 @@ p.text-white a {
   height: 55px;
   line-height: 53px;
   font-size: 18px;
-  border-radius: 100px;
+  border-radius: 8px;
   padding: 0 36px;
   border: 1px solid #ccc;
   color: #6dc77a;
@@ -892,7 +892,7 @@ nav a {
   color: #666;
 }
 nav .logo {
-  max-height: 18px;
+  max-height: 45px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1124,7 +1124,7 @@ nav ul li:hover .subnav .subnav {
   position: relative;
 }
 .nav-1 .logo {
-  margin-top: 28px;
+  margin-top: 16px;
 }
 .nav-1 .menu {
   margin-top: 26px;
@@ -1139,7 +1139,7 @@ nav ul li:hover .subnav .subnav {
   margin-top: 17px;
 }
 .nav-1.shrink .logo {
-  margin-top: 18px;
+  margin-top: 7px;
 }
 .nav-1.shrink .btn {
   margin-top: 7px;
@@ -3908,7 +3908,7 @@ footer .container {
   opacity: 1;
 }
 .footer-1 img {
-  max-height: 17px;
+  max-height: 35px;
 }
 .footer-1 .sub {
   line-height: 17px;
@@ -3939,7 +3939,7 @@ footer .container {
   margin-bottom: 80px;
 }
 .footer-2 img {
-  max-height: 17px;
+  max-height: 35px;
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -3950,7 +3950,7 @@ footer .container {
   }
 }
 .footer-3 img {
-  max-height: 17px;
+  max-height: 35px;
 }
 .footer-3 .lower {
   border-top: 1px solid #eee;
@@ -4008,7 +4008,7 @@ footer .container {
   background: rgba(255, 255, 255, 0.2);
 }
 .footer-4 img {
-  max-height: 17px;
+  max-height: 35px;
   margin-bottom: 20px;
 }
 @media all and (max-width: 767px) {
@@ -4020,7 +4020,7 @@ footer .container {
   padding: 40px 0;
 }
 .footer-5 img {
-  max-height: 17px;
+  max-height: 35px;
   position: relative;
   bottom: 4px;
   margin-right: 32px;
@@ -4045,7 +4045,7 @@ footer .container {
 }
 .footer-6 img {
   display: block;
-  max-height: 17px;
+  max-height: 35px;
   margin-bottom: 40px;
 }
 .footer-6 input[type="submit"] {

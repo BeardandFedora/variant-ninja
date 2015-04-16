@@ -4,20 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Variant HTML Builder by Labster</title>
+    <title>Variant Ninja Page Builder</title>
     <link rel="stylesheet" href="builder/css/variant-icons.css">
     <link rel="stylesheet" href="builder/css/variant-social-icons.css">
     <link rel="stylesheet" href="builder/css/normalize.css">
     <link rel="stylesheet" href="builder/css/flexslider.min.css">
     <link rel="stylesheet" href="builder/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
-
-
     <link href="builder/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="builder/theme/css/icons.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="builder/theme/css/flexslider.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="builder/theme/css/theme.css" rel="stylesheet" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico" />
     <style>
         nav.fixed, nav.overlay {
             left: 48px;
@@ -52,7 +54,7 @@
             width:100%;
             height:100%;
             z-index:9999;
-            background:#2b2b2b;
+            background:#fff;
             font-family:Roboto, "Helvetica Neue", Helvetica, Helvetica, Arimo, Arial, sans-serif!important;
             font-smoothing:antialiased;
             -webkit-font-smoothing:antialiased;
@@ -78,7 +80,7 @@
             width:200px;
             margin-left:-100px;
             text-align:center;
-            color:#fff;
+            color:#333;
             font-size:13px
         }
         .vha span {
@@ -90,7 +92,6 @@
             max-width:120px;
             display:inline-block;
             margin-bottom:12px;
-            opacity:.5
         }
         .vla {
             position:absolute;
@@ -108,8 +109,8 @@
             opacity:1
         }
         .vlc {
-            background:#333;
-            color:#eee;
+            background:#efefef;
+            color:#666;
             padding:24px;
             border-radius:2px
         }
@@ -124,22 +125,12 @@
         }
         .vld {
             cursor:wait;
-            background-color:transparent;
-            opacity:.3;
-            border-radius:30px;
-            animation:loading .5s infinite linear;
-            -moz-animation:loading .5s infinite linear;
-            -webkit-animation:loading .5s infinite linear;
-            border:5px solid #fff;
-            border-top:5px solid transparent;
-            border-left:5px solid transparent;
-            width:30px;
-            height:30px;
+            width:55px;
+            height:55px;
             position:absolute;
             left:50%;
             margin-left:-15px;
-            top:50%;
-            margin-top:50px
+            top:37%;
         }
         @keyframes loading {
             0% {
@@ -179,6 +170,14 @@
                     <div class="vlc">
                         <span class="oi" data-glyph="lightbulb"></span>
                         <p>
+                            The builder is loading. It may take a minute...
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="vlc">
+                        <span class="oi" data-glyph="lightbulb"></span>
+                        <p>
                             Right-click elements on the page to edit them.
                         </p>
                     </div>
@@ -197,7 +196,16 @@
                     <div class="vlc">
                         <span class="oi" data-glyph="lightbulb"></span>
                         <p>
-                            Export pages as Variant files for later editing.
+                            Get HTML for copy/paste or download as .html page
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="vlc">
+                        <span class="oi" data-glyph="lightbulb"></span>
+                        <p>
+                            Export page as .variant file for later editing.
                         </p>
                     </div>
                 </li>
@@ -214,18 +222,19 @@
         </div>
 
         <div class="vld">
+			<img src="../builder/img/loading.gif">
 
         </div>
 
         <div class="vhb">
-            <img alt="Variant HTML Page Builder" src="builder/img/full-logo.png">
+
         </div>
 
         <div class="vha">
-            <a target="_blank" href="https://www.labster.com/">
-                <img class="vlb" alt="Variant HTML Page Builder" src="builder/img/labster-logo-30.png">
+            <a target="_blank" href="http://beardandfedora.com/">
+                <img class="vlb" alt="Variant Ninja Static Landing Page Builder" src="img/baf-variant-ninja-logo.png">
             </a>
-            <span>&copy; Copyright 2015 Labster<br>All Rights Reserved</span>
+            <span>&copy; Uncopyright 2015 Beard & Fedora<br>Some Rights Reserved</span>
         </div>
 
         <div class="vjg"></div>
@@ -596,7 +605,7 @@
 
         </div>
 
-        <div class="vdz" vbv="hero1.jpg,hero2.jpg,hero3.jpg,hero4.jpg,hero5.jpg,hero6.jpg,hero7.jpg,hero8.jpg,hero9.jpg,hero10.jpg,hero11.jpg,hero12.jpg,hero13.jpg,hero14.jpg,small1.jpg,small2.jpg,small3.jpg,small4.jpg,small5.jpg,small6.jpg,small7.jpg,small8.jpg,small9.jpg,logo-light.png,logo-dark.png,cinema.png,kickstarter.png,ipad.png,ipad2.png,phone1.png">
+        <div class="vdz" vbv="hero1.jpg,hero2.jpg,hero3.jpg,hero4.jpg,hero5.jpg,hero6.jpg,hero7.jpg,hero8.jpg,hero9.jpg,hero10.jpg,hero11.jpg,hero12.jpg,hero13.jpg,hero14.jpg,small1.jpg,small2.jpg,small3.jpg,small4.jpg,small5.jpg,small6.jpg,small7.jpg,small8.jpg,small9.jpg,baf-logo.png,baf-variant-ninja-logo.png,cinema.png,kickstarter.png,ipad.png,ipad2.png,phone1.png">
             <input type="file" class="vch" name="vci[]" multiple="multiple">
             <div class="vdx">
             </div>
@@ -717,16 +726,15 @@
     </div>
 
     <div class="global-vfr vin vkf">
-        <img alt="Logo" src="builder/img/full-logo.png">
         <div class="vew">
             <div class="vhs vap val">Clear Navs</div>
             <div class="vhs vao val">Clear Footers</div>
             <div class="vhs vaq val">Clear Pages</div>
             <div class="vhs van val">Delete All</div>
         </div>
-        <img alt="Labster" src="builder/img/labster-logo-30.png">
+        <img alt="Variant Ninja" src="img/baf-variant-ninja-logo.png">
         <p>
-            &copy; Copyright <span class="vkg">2015</span> Labster
+            &copy; Unopyright <span class="vkg">2015</span> Beard & Fedora
         </p>
     </div>
 
@@ -992,7 +1000,7 @@
                         <div class="col-sm-12 text-center">
                             <h3>Landing pages with style</h3>
                             <h5>Variant is a flexible landing page template designed for everyone.</h5>
-                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
+                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Variant</a>
                         </div>
                     </div>
                 </div>
@@ -1079,7 +1087,7 @@
                                 <h4>Build stylish landing pages in minutes</h4>
                                 <a class="btn" href="#">Take A Tour</a>
                                 <h6>or</h6>
-                                <a class="btn btn-filled" href="#purchase-template">Buy Labster</a>
+                                <a class="btn btn-filled" href="#purchase-template">Buy Variant</a>
                             </div>
                         </div>
                     </div>
@@ -1142,7 +1150,7 @@
                         <div class="col-md-6">
                             <h3 class="text-white">Build smart landing pages in minutes with Variant.</h3>
                             <h5 class="text-white">
-						Variant allows Labster to assemble beautiful, multi-purpose landing pages in a matter of minutes.
+						Variant allows Beard & Fedora to assemble beautiful, multi-purpose landing pages in a matter of minutes.
 					</h5>
                         </div>
 
@@ -1207,8 +1215,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h3 class="text-white">Build stylish landing pages fast with Labster's Variant</h3>
-                            <h5 class="text-white">A complete landing page solution for Labster campaigns.</h5>
+                            <h3 class="text-white">Build stylish landing pages fast with Beard & Fedora's Variant</h3>
+                            <h5 class="text-white">A complete landing page solution for Beard & Fedora campaigns.</h5>
                             <form class="contained-form form-email" method="post">
                                 <h6 class="text-white">Sign up now for a free 30 day trial</h6>
                                 <input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
@@ -1285,7 +1293,7 @@
                         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                             <h3>Showcase your product's features</h3>
                             <p class="lead">
-                                Variant fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for Labster.
+                                Variant fuses the traditional landing page with stylish, modern web design. Clear, refined looks and sales-centric elements combine to produce smart landing pages ideal for Beard & Fedora.
                             </p>
                         </div>
                     </div>
@@ -1473,7 +1481,7 @@
                         <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center">
                             <h6>What makes Variant unique?</h6>
                             <h4>
-						Variant is a complete landing page solution for <br>Labster. 
+						Variant is a complete landing page solution for <br>Beard & Fedora. 
 						Combine different blocks to suit <br>the style and purpose - it’s as simple as click and edit.
 					</h4>
                             <a href="#" class="btn">Learn More »</a>
@@ -1675,7 +1683,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-                            <h4>Variant is a neat, feature-rich landing page builder designed to showcase Labster in style.</h4>
+                            <h4>Variant is a neat, feature-rich landing page builder designed to showcase Beard & Fedora projects in style.</h4>
                             <p>With multiple options for all sections - Variant has the right stuff for your next landing page.</p>
                         </div>
                     </div>
@@ -1804,9 +1812,9 @@
                         <div class="col-md-6 col-sm-6">
                             <h4>Build smart, effective landing<br> pages in minutes.</h4>
                             <p class="lead">
-                                Variant is a complete landing page solution for Labster. Combine different blocks to suit your style and purpose - it’s as simple click and edit.
+                                Variant is a complete landing page solution for Beard & Fedora projects. Combine different blocks to suit your style and purpose - it’s as simple click and edit.
                             </p>
-                            <a class="btn btn-filled super-action" href="#">Buy Labster</a>
+                            <a class="btn btn-filled super-action" href="#">Buy Variant</a>
                         </div>
 
                         <div class="col-md-6 col-sm-6">
@@ -2417,7 +2425,7 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <h2>Build yours now.</h2>
-                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
+                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Variant</a>
                             <p class="sub">By continuting you agree to our
                                 <br><a href="#">Terms of Use</a>
                             </p>
@@ -2465,9 +2473,9 @@
                         <div class="col-sm-4 col-md-5 text-left">
                             <h3>Build a landing<br> page in minutes.</h3>
                             <p>
-                                “Purchasing Labster was the easiest decision I’ve ever had to make. The sheer flexibility of the labs was what sold it for me.”
+                                “Purchasing Beard & Fedora's Hopstack was the easiest decision I’ve ever had to make. The sheer flexibility of the labs was what sold it for me.”
                             </p>
-                            <span>— James Hillier, Labster student</span>
+                            <span>— James Hillier, Developer</span>
                         </div>
 
                         <div class="col-md-5 col-sm-8">
@@ -2511,8 +2519,8 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <h3>You're in good company</h3>
-                            <h5>Join thousands of satisfied customers using Labster globally.</h5>
-                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
+                            <h5>Join thousands of satisfied customers using Variant globally.</h5>
+                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Variant</a>
                             <p class="sub">By continuting you agree to our
                                 <br><a href="#">Terms of Use</a>
                             </p>
@@ -2533,7 +2541,7 @@
                         <div class="col-sm-12 text-center">
                             <h2 class="text-white">Build better landing pages</h2>
                             <h5 class="text-white">Start today with a free 30 day trial - No credit card required.</h5>
-                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Labster</a>
+                            <a class="btn btn-filled super-action" href="#purchase-template">Buy Variant</a>
                             <p class="sub">By continuting you agree to our
                                 <br><a href="#">Terms of Use</a>
                             </p>
@@ -2639,7 +2647,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <a class="btn btn-filled super-action" href="#purchase-template">Purchase Labster</a>
+                            <a class="btn btn-filled super-action" href="#purchase-template">Purchase Variant</a>
                         </div>
                     </div>
                 </div>
@@ -2678,7 +2686,7 @@
 						Variant enabled us to get our landing page live in under a day. <br>It was a pure joy to use.
 					</h4>
                             <p>
-                                — Joel Serino, Labster
+                                — Fedora, Beard & Fedora
                             </p>
                         </div>
 
@@ -2688,7 +2696,7 @@
 						The guys have created a truly <br>special product here - Finally a<br> builder that delivers results!
 					</h4>
                             <p>
-                                — Jon Hopkins, Labster
+                                — Jon Hopkins, Designer
                             </p>
                         </div>
 
@@ -2698,7 +2706,7 @@
 						We now have a go-to solution <br>for our science labs.<br> We love the flexibility!
 					</h4>
                             <p>
-                                — Will Saul, Labster
+                                — Will Saul, Developer
                             </p>
                         </div>
 
@@ -2708,7 +2716,7 @@
 						What's that? You need a landing<br> page in under an hour?<br> Variant's got your covered.
 					</h4>
                             <p>
-                                — Peter Van Hoesen - Labster
+                                — Peter Van Hoesen - Designer
                             </p>
                         </div>
                     </div>
@@ -2721,7 +2729,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h4>Hear what others think of Labster</h4>
+                            <h4>Hear what others think of Beard & Fedora</h4>
                         </div>
                     </div>
 
@@ -2765,14 +2773,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h6>Kind words from current Labster users</h6>
+                            <h6>Kind words from current Beard & Fedora users</h6>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-6 text-center testimonial">
                             <p class="lead">
-                                “This is the first lab I’ve used from Labster and can happily report complete and utter elation. ”
+                                “This is the first product I’ve used from Beard & Fedora and can happily report complete and utter elation. ”
                             </p>
                             <img alt="Avatar" src="/img/avatar-1.png">
                             <p>
@@ -2782,11 +2790,11 @@
 
                         <div class="col-sm-6 text-center testimonial">
                             <p class="lead">
-                                “I knew from the moment I saw the demos that this was a different kind of beast. Well I was right, Labster is the single most enjoyable online course I’ve used = and believe me, I’ve used plenty.
+                                “I knew from the moment I saw the demos that this was a different kind of beast. Well I was right, Beard & Fedora's Variant Ninja is the single most enjoyable online page builder I’ve used = and believe me, I’ve used plenty.
                             </p>
                             <img alt="Avatar" src="/img/avatar-2.png">
                             <p>
-                                <em>— Will Saul, Student</em>
+                                <em>— Will Saul, Designer</em>
                             </p>
                         </div>
                     </div>
@@ -2802,10 +2810,10 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-                                        <h4>“Look no further - the future of education has arrived - Viva Labster!”</h4>
+                                        <h4>“Look no further - the future of page building has arrived - Viva Beard & Fedora!”</h4>
                                         <img alt="Avatar" src="/img/avatar-3.png">
                                         <p>
-                                            <em>— Jesse Ware, Professor</em>
+                                            <em>— Jesse Ware, Developer</em>
                                         </p>
                                     </div>
                                 </div>
@@ -2816,10 +2824,10 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-                                        <h4>“Labster is by far the easiest online course I've had the pleasure of working with.”</h4>
+                                        <h4>“Beard & Fedora are by far the easiest people I've had the pleasure of working with.”</h4>
                                         <img alt="Avatar" src="/img/avatar-1.png">
                                         <p>
-                                            <em>— Jon Hopkins, Professor</em>
+                                            <em>— Jon Hopkins, Person</em>
                                         </p>
                                     </div>
                                 </div>
@@ -2853,12 +2861,12 @@
                         </div>
 
                         <div class="col-md-5 col-sm-6">
-                            <h4>Kind words from current Labster customers</h4>
+                            <h4>Kind words from current Beard & Fedora customers</h4>
                             <div class="slider">
                                 <ul class="slides">
                                     <li>
                                         <p>
-                                            “Wow - what an amazing product. I’m so glad to have found Labster. ”
+                                            “Wow - what an amazing product. I’m so glad to have found Variant. ”
                                         </p>
                                         <p>
                                             <em>— Jesse Ware, Devotion</em>
@@ -2867,7 +2875,7 @@
 
                                     <li>
                                         <p>
-                                            “Using Labster I was able to make our students pass exams faster than it would usually take to get a get an A+.”
+                                            “Using Variant I was able to make our pages faster than it would usually take to get a get an coffee.”
                                         </p>
                                         <p>
                                             <em>— Carl Craig, At Les</em>
@@ -2876,7 +2884,7 @@
 
                                     <li>
                                         <p>
-                                            “Just a complete joy to work with. I am often skeptical about online courses and virtual labs, but this did it for me!”
+                                            “Just a complete joy to work with. I am often skeptical about online page builders, but this did it for me!”
                                         </p>
                                         <p>
                                             <em>— Guy Gerber, Moon Blur</em>
@@ -2895,7 +2903,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h4>Follow <a href="#">@labster</a> for updates</h4>
+                            <h4>Follow <a href="#">@beardandfedora</a> for updates</h4>
                         </div>
                     </div>
 
@@ -2917,7 +2925,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h6 class="text-white">Follow <a href="#">@labster-logo-30web</a> for updates</h6>
+                            <h6 class="text-white">Follow <a href="#">@beardandfedora</a> for updates</h6>
                         </div>
                     </div>
 
@@ -2952,7 +2960,7 @@
                             </div>
                             <h4>We're Snap Happy</h4>
                             <p>
-                                Stay connected with us <a href="#">@labster-logo-30web</a> for updates
+                                Stay connected with us <a href="#">@beardandfedora</a> for updates
                                 <br>and super special exclusive offers.
                             </p>
                         </div>
@@ -3051,7 +3059,7 @@
                             <div class="faq">
                                 <h5>Do you provide support for Variant?</h5>
                                 <p>
-                                    Yes - Labster provides support for Variant via our dedicated support forum at <a target="_blank" href="https://mediulabster-logo-30.ticksy.com">mediulabster-logo-30.ticksy.com</a>. This includes general item support but not additional customisation services.
+                                    Yes - Beard & Fedora provides support for Variant via our dedicated support robot. 
                                 </p>
                             </div>
 
@@ -3061,7 +3069,7 @@
 
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h4>Still have questions? Tweet <a target="_blank" href="https://twitter.com/labster">@labster</a> for answers</h4>
+                            <h4>Still have questions? Tweet <a target="_blank" href="https://twitter.com/beardandfedora">@beardandfedora</a> for answers</h4>
                         </div>
                     </div>
                 </div>
@@ -3168,7 +3176,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-4">
                                 <a href="#">
-                                    <img class="logo" alt="Logo" src="/img/logo-dark.png">
+                                    <img class="logo" alt="Logo" src="/img/baf-variant-ninja-logo.png">
                                 </a>
                             </div>
 
@@ -3243,7 +3251,7 @@
                     <div class="row">
                         <div class="col-xs-4">
                             <a href="#">
-                                <img alt="Logo" class="logo" src="/img/logo-light.png">
+                                <img alt="Logo" class="logo" src="/img/baf-variant-ninja-logo.png">
                             </a>
                         </div>
 
@@ -3346,13 +3354,13 @@
 
                         <div class="col-sm-4 text-center">
                             <p class="sub">
-                                &copy; Copyright 2015 Labster - All Rights Reserved
+                                &copy; Uncopyright 2015 Beard & Fedora - Some Rights Reserved
                             </p>
                         </div>
 
                         <div class="col-sm-4 text-right">
                             <a href="#">
-                                <img alt="Logo" src="/img/logo-dark.png">
+                                <img alt="Logo" src="/img/baf-variant-ninja-logo.png">
                             </a>
                         </div>
                     </div>
@@ -3396,10 +3404,10 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <a href="#">
-                                <img alt="Logo" src="/img/logo-dark.png">
+                                <img alt="Logo" src="/img/baf-variant-ninja-logo.png">
                             </a>
                             <p class="sub">
-                                &copy; Copyright 2015 Labster - All Rights Reserved
+                                &copy; Uncopyright 2015 Beard & Fedora - Some Rights Reserved
                             </p>
                         </div>
                     </div>
@@ -3413,7 +3421,7 @@
                     <div class="row">
                         <div class="col-md-2 col-md-offset-3 col-sm-4">
                             <a href="#">
-                                <img alt="Logo" src="/img/logo-dark.png">
+                                <img alt="Logo" src="/img/baf-variant-ninja-logo.png">
                             </a>
                         </div>
 
@@ -3471,7 +3479,7 @@
                     <div class="col-md-6 col-md-offset-3">
                         <div class="lower">
                             <p class="sub">
-                                &copy; Copyright 2015 Labster - All Rights Reserved
+                                &copy; Uncopyright 2015 Beard & Fedora - Some Rights Reserved
                             </p>
                         </div>
                     </div>
@@ -3509,9 +3517,9 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <a href="#">
-                                <img alt="Logo" src="/img/logo-light.png">
+                                <img alt="Logo" src="/img/baf-variant-ninja-logo.png">
                                 <p class="sub text-white">
-                                    &copy; Copyright 2015 Labster - All Rights Reserved
+                                    &copy; Uncopyright 2015 Beard & Fedora - Some Rights Reserved
                                 </p>
                             </a>
                         </div>
@@ -3525,7 +3533,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <img alt="Logo" src="/img/logo-dark.png">
+                            <img alt="Logo" src="/img/baf-variant-ninja-logo.png">
                             <p class="lead">
                                 Free 30 day trial - Start building now
                             </p>
@@ -3537,7 +3545,7 @@
                         <div class="col-sm-12 text-center">
                             <div class="lower">
                                 <p class="sub">
-                                    &copy; Copyright 2015 Labster - All Rights Reserved
+                                    &copy; Uncopyright 2015 Beard & Fedora - Some Rights Reserved
                                 </p>
                             </div>
                         </div>
@@ -3552,7 +3560,7 @@
                     <div class="row">
                         <div class="col-md-8 col-sm-6">
                             <a href="#">
-                                <img alt="Logo" src="/img/logo-dark.png">
+                                <img alt="Logo" src="/img/baf-variant-ninja-logo.png">
                             </a>
                             <form class="form-email" method="post">
                                 <input type="text" name="Email Address" class="validate-email signup-email-field" placeholder="Newsletter Signup">
@@ -3631,7 +3639,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <p class="sub">
-                                &copy; Copyright 2015 Labster - All Rights Reserved
+                                &copy; Uncopyright 2015 Beard & Fedora - Some Rights Reserved
                             </p>
                         </div>
                     </div>
@@ -3661,42 +3669,46 @@
 				
 &lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
-
 &lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;[title]&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;Award Winning Virtual Laboratories for High Schools, Colleges and Universities&quot;&gt;
+    &lt;title&gt;{{ site.title }}&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
     &lt;meta name=&quot;HandheldFriendly&quot; content=&quot;True&quot;&gt;
     &lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
     &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
     &lt;meta name=&quot;apple-touch-fullscreen&quot; content=&quot;yes&quot; /&gt;
-    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;img/labster-icon-small.png&quot;&gt;
-    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;img/labster-icon-small.png&quot;&gt;
-    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;img/labster-icon-small.png&quot;&gt;
-    &lt;link rel=&quot;shortcut icon&quot; href=&quot;img/labster-icon-small.png&quot; /&gt;
-
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;img/favicon.ico&quot; /&gt;
     &lt;!-- open graph --&gt;
-    &lt;meta property=&quot;og:url&quot; content=&quot;http://www.labster.com&quot;&gt;
-    &lt;meta property=&quot;og:title&quot; content=&quot;Labster is Life-Science Learning, Evolved.&quot;&gt;
-    &lt;meta property=&quot;og:description&quot; content=&quot;Award Winning Virtual Laboratories for High Schools, Colleges and Universities&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;&quot;&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;&quot;&gt;
     &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
-    &lt;meta property=&quot;og:image&quot; content=&quot;http://www.labster.com/images/labster-logo.png&quot;&gt;
+    &lt;meta property=&quot;og:image&quot; content=&quot;&quot;&gt;
     &lt;!-- twitter cards --&gt;
     &lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
-    &lt;meta name=&quot;twitter:site&quot; content=&quot;@labster&quot;&gt;
-    &lt;meta name=&quot;twitter:url&quot; content=&quot;http://www.labster.com&quot;&gt;
-    &lt;meta name=&quot;twitter:title&quot; content=&quot;Labster is Life-Science Learning, Evolved.&quot;&gt;
-    &lt;meta name=&quot;twitter:description&quot; content=&quot;Award Winning Virtual Laboratories for High Schools, Colleges and Universities&quot;&gt;
-    &lt;meta name=&quot;twitter:image&quot; content=&quot;http://www.labster.com/images/labster-logo.png&quot;&gt;
-    &lt;link rel=&quot;canonical&quot; href=&quot;http://www.labster.com&quot;&gt;
+    &lt;meta name=&quot;twitter:site&quot; content=&quot;@&quot;&gt;
+    &lt;meta name=&quot;twitter:url&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;twitter:title&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;twitter:description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;twitter:image&quot; content=&quot;&quot;&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;&quot;&gt;
     &lt;!--[if lt IE 9]&gt;
         	&lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;
-        	&lt;script src=&quot;https://oss.maxcdn.com/libs/respond.../js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+        	&lt;script src=&quot;https://oss.maxcdn.com/libs/respond/js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
     	&lt;![endif]--&gt;
+    &lt;!-- Angulartics --&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;js/vendor/angulartics.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;js/vendor/angulartics-ga.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;js/vendor/angulartics-gtm.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;js/analytics-app.js&quot;&gt;&lt;/script&gt;    
     &lt;!-- Google Analytics --&gt;
-    &lt;script&gt;
+	&lt;script&gt;
         (function(i, s, o, g, r, a, m) {
             i[&#39;GoogleAnalyticsObject&#39;] = r;
             i[r] = i[r] || function() {
@@ -3708,15 +3720,17 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, &#39;script&#39;, &#39;//www.google-analytics.com/analytics.js&#39;, &#39;ga&#39;);
-		ga(&#39;create&#39;, &#39;UA-25584366-10&#39;, &#39;auto&#39;);
+		ga(&#39;create&#39;, &#39;UA-XXXXXXXX-XX&#39;, &#39;auto&#39;);
 		ga(&#39;require&#39;, &#39;linkid&#39;, &#39;linkid.js&#39;);
 		ga(&#39;set&#39;, &#39;contentGroup2&#39;, &#39;Variant Landing Pages&#39;); 
-		ga(&#39;_setDomainName&#39;, &#39;ww3.labster.com&#39;);
+		ga(&#39;_setDomainName&#39;, &#39;XXX.XXX.com&#39;);
 		ga(&#39;_setAllowLinker&#39;, true);
+		ga(&#39;send&#39;, &#39;pageview&#39;);
     &lt;/script&gt;
-    &lt;!-- Google Tag Manager --&gt;
+
+	&lt;!-- Google Tag Manager --&gt;
     &lt;noscript&gt;
-        &lt;iframe src=&quot;//www.googletagmanager.com/ns.html?id=GTM-KT7ZFL&quot; height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;
+        &lt;iframe src=&quot;//www.googletagmanager.com/ns.html?id=GTM-XXXXXX&quot; height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;
     &lt;/noscript&gt;
     &lt;script&gt;
         (function(w, d, s, l, i) {
@@ -3731,7 +3745,7 @@
             j.async = true;
             j.src = &#39;//www.googletagmanager.com/gtm.js?id=&#39; + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, &#39;script&#39;, &#39;dataLayer&#39;, &#39;GTM-PFT4Q5&#39;);
+        })(window, document, &#39;script&#39;, &#39;dataLayer&#39;, &#39;GTM-XXXXXX&#39;);
     &lt;/script&gt;
     &lt;!-- End Google Tag Manager --&gt;
 	&lt;link href=&quot;//fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
@@ -3796,7 +3810,7 @@
     <script class="vaz" type="application/json">
         {
             "original": {
-                "name": "Labster Variant",
+                "name": "Variant Ninja",
                 "pathToOriginal": "mixture/public/css/less/",
                 "originalFileName": "theme",
                 "colours": ["#6dc77a"]
