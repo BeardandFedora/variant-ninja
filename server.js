@@ -4,11 +4,6 @@ if(process.env.NODETIME_ACCOUNT_KEY) {
     appName: 'Variant Ninja' // optional
   });
 }
-if(process.env.NEW_RELIC_LICENSE_KEY) {
-  require('newrelic').profile({
-    license_key: process.env.NEW_RELIC_LICENSE_KEY,
-  });
-}
 require('nodetime');
 require('newrelic');
 var cluster = require('cluster');
