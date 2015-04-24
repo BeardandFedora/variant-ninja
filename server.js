@@ -1,10 +1,16 @@
 if(process.env.NODETIME_ACCOUNT_KEY) {
   require('nodetime').profile({
     accountKey: process.env.NODETIME_ACCOUNT_KEY,
-    appName: 'Labster Variant' // optional
+    appName: 'Variant Ninja' // optional
+  });
+}
+if(process.env.NEW_RELIC_LICENSE_KEY) {
+  require('newrelic').profile({
+    license_key: process.env.NEW_RELIC_LICENSE_KEY,
   });
 }
 require('nodetime');
+require('newrelic');
 var cluster = require('cluster');
 var app = require('./app');
 
