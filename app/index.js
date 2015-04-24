@@ -67,14 +67,9 @@ app.get('/campaigns', function(req, res) {
 	res.renderDebug('campaigns.html');
 });
 
-// Serve learn-life-sciences.html in /
-app.get('/learn-life-sciences', function(req, res) {
-	res.renderDebug('learn-life-sciences.html');
-});
-
-// Serve material-free-trial.html in /
-app.get('/virtual-labs-trial', function(req, res) {
-	res.renderDebug('material-free-trial.html');
+// Serve code-wrangler.html in /
+app.get('/code-wrangler', function(req, res) {
+	res.renderDebug('code-wrangler.html');
 });
 
 // Serve privacy.html in /privacy
