@@ -424,7 +424,7 @@ textarea {
 textarea {
   font-weight: 400;
 }
-input[type="text"] {
+input[type="text"], input[type="password"] {
   height: 54px;
   line-height: 48px;
   padding-left: 16px;

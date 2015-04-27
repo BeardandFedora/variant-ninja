@@ -1,10 +1,10 @@
 CACHE MANIFEST
-#Date Tue Mar 31 2015 19:46:00 GMT+0000 (UTC)
+#Date Mon Apr 27 2015 18:43:19 GMT+0000 (UTC)
 #Version 0.5.1
 
 CACHE:
 .
-build
+#build
 
 # start_inject_resources
 builder/builder.html
@@ -33,6 +33,7 @@ builder/fonts/variant=icons.eot
 builder/img/checkerboard.png
 builder/img/full-logo.png
 builder/img/labster-logo-30.png
+builder/img/loading.gif
 builder/img/mailchimp-cmonitor.png
 builder/img/mrare.png
 builder/img/new.png
@@ -62,6 +63,12 @@ builder/theme/optional-element-classes.json
 builder/docs/launchkit/icons-reference.html
 builder/docs/launchkit/index.html
 builder/docs/variant/index.html
+builder/img/chooser/1.jpg
+builder/img/chooser/2.jpg
+builder/img/chooser/3.jpg
+builder/img/chooser/4.jpg
+builder/img/chooser/5.jpg
+builder/img/chooser/6.jpg
 builder/img/fonts/cardo.png
 builder/img/fonts/helvetica.png
 builder/img/fonts/lato.png
@@ -385,10 +392,15 @@ builder/docs/variant/assets/img/icons/social.png
 builder/docs/variant/assets/img/offcanvas/footer-icons-retina.png
 builder/docs/variant/assets/img/offcanvas/footer-icons.png
 builder/docs/variant/assets/img/offcanvas/zurb-logo.png
+img/1429914574_43-128.png
+img/1429914670_39-128.png
+img/1429914702_32-128.png
 img/appstore.png
 img/avatar-1.png
 img/avatar-2.png
 img/avatar-3.png
+img/baf-logo.png
+img/baf-variant-ninja-logo.png
 img/cater1.jpg
 img/cater2.jpg
 img/cater3.jpg
@@ -396,6 +408,7 @@ img/cater4.jpg
 img/cater5.jpg
 img/cater6.jpg
 img/cinema.png
+img/fedora-logo.png
 img/fit1.jpg
 img/fit2.jpg
 img/fit3.jpg

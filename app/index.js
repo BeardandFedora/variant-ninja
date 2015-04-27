@@ -9,6 +9,38 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash    = require('connect-flash');
+var cookieParser = require('cookie-parser');
+var session      = require('express-session');
+var configDB = require('./database.js');
+
+
+//mongoose.connect(configDB.url); // connect to our database
+require('./passport.js')(passport);
+// set up the express application
+app.use(favicon(__dirname + '/../public/favicon.ico'));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(multer({
+	dest: __dirname + '/../views/', // this is where new pages are uploaded via Multer
+	rename: function (fieldname, filename) {
+    	return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
+  	},
+	onFileUploadStart: function (file, req, res) {
+  		console.log(file.fieldname + ' is starting to upload...')
+	},
+	onFileUploadComplete: function (file, req, res) {
+  		console.log(file.fieldname + ' uploaded to  ' + file.path)
+	},
+	onFilesLimit: function () {
+  		console.log('You crossed the file limit! Are you adding an HTML file?')
+	}
+})); 
 
 
 /* It's not quite Project Metosis, but this is going to allow us to
@@ -49,6 +81,17 @@ app.use(function(req, res, next) {
 });
 
 
+// Required for Passport
+app.use(session({
+    secret: "RTIoTErmERIsHrAlfIgLoTioNy",
+    saveUninitialized: true, // (default: true)
+    resave: true // (default: true)
+  }));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+
 /*
  * Load Variant routes
 */
@@ -57,162 +100,13 @@ app.use(function(req, res, next) {
  * be a single page app with meta pages, both of which we can assign routes for.
 */
 
-// Serve landing.html in /
-app.get('/', function(req, res) {
-	res.renderDebug('builder.html');
-});
-
-// Serve learn-life-sciences.html in /
-app.get('/campaigns', function(req, res) {
-	res.renderDebug('campaigns.html');
-});
-
-// Serve code-wrangler.html in /
-app.get('/code-wrangler', function(req, res) {
-	res.renderDebug('code-wrangler.html');
-});
-
-// Serve privacy.html in /privacy
-app.get('/privacy', function(req, res) {
-	res.renderDebug('privacy.html');
-});
-
-// Serve terms.html in /terms
-app.get('/terms', function(req, res) {
-	res.renderDebug('terms.html');
-});
-
-// Serve builder.html in /builder
-app.get('/build', function(req, res) {
-	res.renderDebug('builder.html');
-});
-
-// Serve examples/
-app.get('/multi', function(req, res) {
-	res.renderDebug('examples/multi.html');
-});
-app.get('/adventure', function(req, res) {
-	res.renderDebug('examples/adventure.html');
-});
-app.get('/agency', function(req, res) {
-	res.renderDebug('examples/agency.html');
-});
-app.get('/fitness', function(req, res) {
-	res.renderDebug('examples/fitness.html');
-});
-app.get('/cater', function(req, res) {
-	res.renderDebug('examples/cater.html');
-});
-app.get('/learn', function(req, res) {
-	res.renderDebug('examples/learn.html');
-});
-app.get('/news', function(req, res) {
-	res.renderDebug('examples/news.html');
-});
-
-// Upload route handler
-app.post("/upload", function(req, res, next){ 
-	if (req.files) { 
-		console.log(util.inspect(req.files));
-		if (req.files.myFile.size === 0) {
-		            return next(new Error("Please select a file."));
-		}
-		fs.exists(req.files.myFile.path, function(exists) { 
-			if(exists) { 
-				res.end("We uploaded your landing page!"); 
-			} else { 
-				res.end("Well, there is no magic for those who don’t believe in it!"); 
-			} 
-		}); 
-	} 
-});
-/* ***********
- * Error Pages
- * ***********
- */
+// routes ======================================================================
+require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 
-// Error 404
-app.use(function(req, res) {
-	res.status(404);
-	res.render('error_404.html');
-});
-
-// Error 403
-app.use(function(req, res) {
-	res.status(403);
-	res.render('error_404.html');
-});
-
-// Error 401
-app.use(function(req, res) {
-	res.status(401);
-	res.render('error_404.html');
-});
-
-// Error 500
-app.use(function(req, res) {
-	res.status(500);
-	res.render('error_404.html');
-});
 
 
-app.use(favicon(__dirname + '/../public/favicon.ico'));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(multer({
-	dest: __dirname + '/../views/', // this is where new pages are uploaded via Multer
-	rename: function (fieldname, filename) {
-    	return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
-  	},
-	onFileUploadStart: function (file, req, res) {
-  		console.log(file.fieldname + ' is starting to upload...')
-	},
-	onFileUploadComplete: function (file, req, res) {
-  		console.log(file.fieldname + ' uploaded to  ' + file.path)
-	},
-	onFilesLimit: function () {
-  		console.log('You crossed the file limit! Are you adding an HTML file?')
-	}
-})); 
 
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-
-/* jshint ignore:start */
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
-/* jshint ignore:end */
 
 
 
