@@ -146,6 +146,9 @@ module.exports = function(app) {
 	app.get('/ghost-growth', function(req, res) {
         res.renderDebug('ghost-growth.html');
     });
+	app.get('/-moz-fe-engineer:true', function(req, res) {
+        res.renderDebug('mozilla-frontend-engineer.html');
+    });
 
 	
 	
