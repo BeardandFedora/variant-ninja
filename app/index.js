@@ -9,15 +9,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-//var mongoose = require('mongoose');
-//var passport = require('passport');
-//var flash    = require('connect-flash');
-//var cookieParser = require('cookie-parser');
-//var session      = require('express-session');
-//var configDB = require('./database.js');
-
-//mongoose.connect(configDB.url); // connect to our database
-//require('./passport.js')(passport);
+var flash    = require('connect-flash');
+var stormpath = require('express-stormpath');
+var session      = require('express-session');
 
 
 // set up the express application
@@ -43,6 +37,9 @@ app.use(multer({
 	}
 })); 
 
+
+// Set up the Stormpath application
+require('./stormpath.js')(app, stormpath);
 
 /* It's not quite Project Metosis, but this is going to allow us to
  * serve meta pages (static resources) that are isolated from the core application middleware
@@ -81,17 +78,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-/*
-// Required for Passport
-app.use(session({
-    secret: "RTIoTErmERIsHrAlfIgLoTioNy",
-    saveUninitialized: true, // (default: true)
-    resave: true // (default: true)
-  }));
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
-*/
+
 
 /*
  * Load Variant routes
@@ -102,8 +89,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 */
 
 // routes ======================================================================
-//require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
-require('./routes.js')(app); // load our routes and pass in our app and fully configured passport
+require('./routes.js')(app, stormpath); // load our routes and pass in our app and fully configured stormpath
+//require('./routes.js')(app); // load our routes and pass in our app
 
 
 

@@ -1,103 +1,29 @@
-// app/routes/index.js
-//module.exports = function(app, passport) {
-module.exports = function(app) {
+module.exports = function(app, stormpath) {
+//module.exports = function(app) {
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
         res.render('index.html'); // load the index.ejs file
     });
-    
-	/* Static pages TEMP */
-    app.get('/login', function(req, res) {
-        res.renderDebug('login.html');
-    });
-    app.get('/signup', function(req, res) {
-        res.renderDebug('signup.html');
-    });
-	
-	
-	/*
-	// =====================================
-    // SIGNUP ==============================
-    // =====================================
-    // show the signup form
-    app.get('/signup', function(req, res) {
 
-        // render the page and pass in any flash data if it exists
-        res.render('signup.html', { message: req.flash('signupMessage') });
-    });
-
-    // process the signup form
-    app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/signup', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-    }));
-
-    // =====================================
-    // PROFILE SECTION =====================
-    // =====================================
-    // we will want this protected so you have to be logged in to visit
-    // we will use route middleware to verify this (the isLoggedIn function)
-    app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.html', {
-            user : req.user // get the user out of session and pass to template
-        });
-    });
-	// =====================================
-    // LOGIN ===============================
-    // =====================================
-    // show the login form
-    app.get('/login', function(req, res) {
-        // render the page and pass in any flash data if it exists
-        res.render('login.html', {
-            message: req.flash('loginMessage')
-        });
-    });
-    // process the login form
-    app.post('/login', passport.authenticate('local-login', {
-        successRedirect: '/build', // redirect to the secure profile section
-        failureRedirect: '/login', // redirect back to the signup page if there is an error
-        failureFlash: true // allow flash messages
-    }));
-    // =====================================
-    // LOGOUT ==============================
-    // =====================================
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
-    });
-
- 	// Load the builder if the user is authenticated
-    app.get('/secure-build', function(req, res, next) {
-        passport.authenticate('local', function(err, user, info) {
-            if(err) {
-                return next(err);
-            }
-            if(!user) {
-                return res.redirect('/login');
-            }
-            req.logIn(user, function(err) {
-                if(err) {
-                    return next(err);
-                }
-                return res.redirect('/build/');
-            });
-        })(req, res, next);
-    });
-	
-	*/
+	// Serve builder.html in /build
+	// Let's also lock this down with stormpath, by directory groups
+	//app.get('/build', stormpath.groupsRequired(['Tier 1', 'Tier 2', 'Admin', 'Beta'], false), function(req, res) {
+	app.get('/build', stormpath.loginRequired, function(req, res) {
+    	res.renderDebug('builder.html');
+	});	
 	
 	
     /* KISS. A keep it simple routing scheme here... forever. This app is intended to
      * be a single page app with meta pages, both of which we can assign routes for.
      */
 
-    // Serve builder
+    /*/ Serve builder
     app.get('/build', function(req, res) {
         res.renderDebug('builder.html');
     });
+	*/
 	
 	// Serve learn-life-sciences.html in /
     app.get('/campaigns', function(req, res) {
