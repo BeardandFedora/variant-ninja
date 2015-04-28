@@ -118,12 +118,22 @@ module.exports = function(app, passport) {
     app.get('/news', function(req, res) {
         res.renderDebug('examples/news.html');
     });
-    // Serve custom pages being hosted here
+
+	
+	// Serve custom pages being hosted here
     //Serve code-wrangler.html 
     app.get('/code-wrangler', function(req, res) {
         res.renderDebug('code-wrangler.html');
+    });    
+	app.get('/traction-engineer', function(req, res) {
+        res.renderDebug('traction-engineer.html');
     });
-    // Upload route handler
+
+	
+	
+	
+	
+	// Upload route handler
     app.post("/upload", function(req, res, next) {
         if(req.files) {
             console.log(util.inspect(req.files));
