@@ -9,11 +9,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var mongoose = require('mongoose');
-var passport = require('passport');
-var flash    = require('connect-flash');
-var cookieParser = require('cookie-parser');
-var session      = require('express-session');
+//var mongoose = require('mongoose');
+//var passport = require('passport');
+//var flash    = require('connect-flash');
+//var cookieParser = require('cookie-parser');
+//var session      = require('express-session');
 //var configDB = require('./database.js');
 
 //mongoose.connect(configDB.url); // connect to our database
