@@ -14,11 +14,12 @@ var passport = require('passport');
 var flash    = require('connect-flash');
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
-var configDB = require('./database.js');
-
+//var configDB = require('./database.js');
 
 //mongoose.connect(configDB.url); // connect to our database
-require('./passport.js')(passport);
+//require('./passport.js')(passport);
+
+
 // set up the express application
 app.use(favicon(__dirname + '/../public/favicon.ico'));
 app.use(logger('dev'));
@@ -80,7 +81,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-
+/*
 // Required for Passport
 app.use(session({
     secret: "RTIoTErmERIsHrAlfIgLoTioNy",
@@ -90,7 +91,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
-
+*/
 
 /*
  * Load Variant routes
@@ -101,7 +102,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 */
 
 // routes ======================================================================
-require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+//require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./routes.js')(app); // load our routes and pass in our app and fully configured passport
 
 
 

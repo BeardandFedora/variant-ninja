@@ -6,7 +6,9 @@ module.exports = function(app, passport) {
     app.get('/', function(req, res) {
         res.render('index.html'); // load the index.ejs file
     });
-    // =====================================
+    
+	/*
+	// =====================================
     // SIGNUP ==============================
     // =====================================
     // show the signup form
@@ -57,10 +59,7 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
-    /* KISS. A keep it simple routing scheme here... forever. This app is intended to
-     * be a single page app with meta pages, both of which we can assign routes for.
-     */
-    // Load the builder if the user is authenticated
+ 	// Load the builder if the user is authenticated
     app.get('/secure-build', function(req, res, next) {
         passport.authenticate('local', function(err, user, info) {
             if(err) {
@@ -77,6 +76,13 @@ module.exports = function(app, passport) {
             });
         })(req, res, next);
     });
+	
+	*/
+	
+	
+    /* KISS. A keep it simple routing scheme here... forever. This app is intended to
+     * be a single page app with meta pages, both of which we can assign routes for.
+     */
 
     // Serve builder
     app.get('/build', function(req, res) {
