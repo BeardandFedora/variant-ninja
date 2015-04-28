@@ -8,6 +8,15 @@ module.exports = function(app) {
         res.render('index.html'); // load the index.ejs file
     });
     
+	/* Static pages TEMP */
+    app.get('/login', function(req, res) {
+        res.renderDebug('login.html');
+    });
+    app.get('/signup', function(req, res) {
+        res.renderDebug('signup.html');
+    });
+	
+	
 	/*
 	// =====================================
     // SIGNUP ==============================
@@ -90,7 +99,6 @@ module.exports = function(app) {
         res.renderDebug('builder.html');
     });
 	
-	
 	// Serve learn-life-sciences.html in /
     app.get('/campaigns', function(req, res) {
         res.renderDebug('campaigns.html');
@@ -134,6 +142,9 @@ module.exports = function(app) {
     });    
 	app.get('/traction-engineer', function(req, res) {
         res.renderDebug('traction-engineer.html');
+    });
+	app.get('/ghost-growth', function(req, res) {
+        res.renderDebug('ghost-growth.html');
     });
 
 	
