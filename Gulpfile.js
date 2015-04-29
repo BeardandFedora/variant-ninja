@@ -85,7 +85,7 @@ gulp.task('clean-builder-js', function() {
 
 gulp.task('clean-angular-js', function() {
 	return gulp.src([
-		'./public/angular*.js'
+		'./public/js/angular*.js'
 	])
 		// .pipe(debug())
         .pipe(clean());
@@ -231,7 +231,10 @@ gulp.task('builder-less', ['clean-builder-less'], function() {
  */
 
 gulp.task('clean-font', function() {
-	return gulp.src('./public/fonts')
+	return gulp.src([
+		'./public/fonts',
+		'./public/builder/fonts'
+	])
 		// .pipe(debug())
         .pipe(clean());
 });
@@ -323,6 +326,8 @@ gulp.task('cache', function() {
 gulp.task('clean', [
 	'clean-js',
 	'clean-builder-js',
+	'clean-angular-js',
+	'clean-variant-js',
 	'clean-less',
 	'clean-builder-less',
 	'clean-font',
@@ -335,9 +340,13 @@ gulp.task('default', function(cb) {
 //			'jshint',
 			'copy-js',
 			'builder-js',
+			'angular-js',
+			'variant-js',
 			'less',
+			'css',
 			'builder-less',
 			'copy-font',
+			'builder-font',
 			'builder-img',
 			'copy-img'
 		],
@@ -394,7 +403,7 @@ function releaseTask(importance) {
 	return function(cb) {
 		runSequence(
 			'bump-' + importance,
-			'default',
+			//'default', // THIS HAS NOT BEEN TESTED APRIL 29
 			'git-tag',
 			cb);
 	};
