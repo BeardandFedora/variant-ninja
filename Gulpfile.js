@@ -14,6 +14,9 @@ var util = require('gulp-util');
 var clean = require('gulp-clean');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var concatCss = require('gulp-concat-css');
+var rename = require("gulp-rename");
 var inject = require('gulp-inject');
 var less = require('gulp-less');
 var replace = require('gulp-replace');
@@ -48,7 +51,8 @@ gulp.task('jshint', function() {
 	return gulp.src([
 		'./app/**/*.js',
 		'./src/js/vendor/**/*.js',
-		'./src/js/**/*.js'
+		'./src/js/**/*.js',
+		'./src/builder/theme/js/**/*.js'
 	])
 		// .pipe(debug())
         .pipe(jshint())
@@ -70,6 +74,91 @@ gulp.task('clean-js', function() {
         .pipe(clean());
 });
 
+gulp.task('clean-builder-js', function() {
+	return gulp.src([
+		'./public/builder/js/*.js',
+		'./public/builder/theme/js/*.js'
+	])
+		// .pipe(debug())
+        .pipe(clean());
+});
+
+gulp.task('clean-angular-js', function() {
+	return gulp.src([
+		'./public/angular*.js'
+	])
+		// .pipe(debug())
+        .pipe(clean());
+});
+
+gulp.task('clean-variant-js', function() {
+	return gulp.src([
+		'./public/variant.min.js'
+	])
+		// .pipe(debug())
+        .pipe(clean());
+});
+
+gulp.task('builder-js', ['clean-builder-js'], function() {
+	return gulp.src([
+		'./src/builder/theme/js/flexslider.min.js',
+		'./src/builder/theme/js/smooth-scroll.min.js',
+		'./src/builder/theme/js/placeholders.min.js',
+		'./src/builder/theme/js/twitterfetcher.min.js',
+		'./src/builder/theme/js/spectragram.min.js',
+		'./src/builder/js/alterClass.js',
+		'./src/builder/js/jquery-ui-1.10.4.custom.min.js',
+		'./src/builder/js/storage2.js',
+		'./src/builder/js/reInit.js',
+		'./src/builder/js/simpleModal.js',
+		'./src/builder/js/jsZip.js',
+		'./src/builder/js/saveAs.js',
+		'./src/builder/js/init.js'
+		
+	])
+		// .pipe(debug())
+       .pipe(concat('builder.js'))
+	   .pipe(rename({suffix: '.min'}))
+       .pipe(uglify())
+       .pipe(gulp.dest('./public/builder/js/'));
+});
+
+gulp.task('angular-js', ['clean-angular-js'], function() {
+	return gulp.src([
+		'./src/js/angular/angulartics.min.js',
+		'./src/js/angular/angulartics-ga.min.js',
+		'./src/js/angular/angulartics-gtm.min.js',
+		'./src/js/angular/analytics-app.js'
+		
+	])
+		// .pipe(debug())
+       .pipe(concat('angulartics.js'))
+	   .pipe(rename({suffix: '.min'}))
+       .pipe(uglify())
+       .pipe(gulp.dest('./public/js/'));
+});
+
+gulp.task('variant-js', ['clean-variant-js'], function() {
+	return gulp.src([
+		'./src/js/flexslider.min.js',
+		'./src/js/smooth-scroll.min.js',
+		'./src/js/placeholders.min.js',
+		'./src/js/twitterfetcher.min.js',
+		'./src/js/spectragram.min.js',
+		'./src/js/jquery.easing.1.3.js',
+		'./src/js/velocity.min.js',
+		'./src/js/form-plugins.js',
+		'./src/js/scripts.js',
+		'./src/js/main.js'
+		
+	])
+		// .pipe(debug())
+       .pipe(concat('variant.js'))
+	   .pipe(rename({suffix: '.min'}))
+       .pipe(uglify())
+       .pipe(gulp.dest('./public/js/'));
+});
+
 gulp.task('copy-js', ['clean-js'], function() {
 	return gulp.src([
 		'./src/js/vendor/*.js',
@@ -80,13 +169,17 @@ gulp.task('copy-js', ['clean-js'], function() {
        .pipe(gulp.dest('./public/js/'));
 });
 
-
 /** __________________________________________
  * Less
  */
 
 gulp.task('clean-less', function() {
 	return gulp.src('./public/css')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('clean-builder-less', function() {
+	return gulp.src('./public/builder/css')
 		// .pipe(debug())
         .pipe(clean());
 });
@@ -101,6 +194,36 @@ gulp.task('less', ['clean-less'], function() {
 		}))
 		// .pipe(debug())
         .pipe(gulp.dest('./public/css/'));
+});
+
+gulp.task('css', ['clean-less'], function() {
+	return gulp.src([
+		'./src/css/icons.min.css',
+		'./src/css/flexslider.min.css',
+		'./src/css/custom.css'
+	])
+		
+		// .pipe(debug())
+		.pipe(concatCss("main.css"))
+		.pipe(rename({suffix: '.min'}))
+	    .pipe(less({
+			compress: true
+		}))
+        .pipe(gulp.dest('./public/css/'));
+});
+
+gulp.task('builder-less', ['clean-builder-less'], function() {
+	return gulp.src([
+		'./src/builder/css/*.css'
+	])
+		
+		// .pipe(debug())
+		.pipe(concatCss("variant.css"))
+	    .pipe(rename({suffix: '.min'}))
+		.pipe(less({
+			compress: true
+		}))
+        .pipe(gulp.dest('./public/builder/css/'));
 });
 
 /** __________________________________________
@@ -121,6 +244,15 @@ gulp.task('copy-font', ['clean-font'], function() {
         .pipe(gulp.dest('./public/fonts/'));
 });
 
+gulp.task('builder-font', ['clean-font'], function() {
+	return gulp.src([
+        './src/builder/fonts/*',
+		'./src/fonts/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/builder/fonts/'));
+});
+
 /** __________________________________________
  * Images
  */
@@ -131,12 +263,24 @@ gulp.task('clean-img', function() {
         .pipe(clean());
 });
 
+
+gulp.task('clean-builder-img', function() {
+	return gulp.src('./public/builder/img/**/*')
+		// .pipe(debug())
+        .pipe(clean());
+});
+
 gulp.task('copy-img', ['clean-img'], function() {
 	return gulp.src('./src/img/*')
 		// .pipe(debug())
         .pipe(gulp.dest('./public/img/'));
 });
 
+gulp.task('builder-img', ['clean-builder-img'], function() {
+	return gulp.src('./src/builder/img/**/*')
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/builder/img/'));
+});
 
 /** __________________________________________
  * cache.manifest
@@ -147,11 +291,18 @@ gulp.task('cache', function() {
 		.pipe(replace(/(#Date ).*/, '$1' + Date()))
 		.pipe(replace(/(#Version ).*/, '$1' + getVersion()))
 		.pipe(inject(gulp.src([
-				'./builder/**/*.*',
+				'./builder/css/**/*.*',
+				'./builder/js/**/*.*',
+				'./builder/fonts/**/*.*',
+				'./builder/img/**/*.*',
+				'./builder/themes/css/**/*.css',
+				'./builder/themes/fonts/**/*.*',
+				'./builder/themes/img/**/*.*',
 				'./img/**/*.*',
 				'./fonts/**/*.*',
 				'./js/**/*.*',
-				'./video/**/*.*'
+				'./styles/**/*.*',
+				'./css/**/*.*'
 			], {
 				read: false,
 				cwd: './public'
@@ -171,17 +322,23 @@ gulp.task('cache', function() {
 
 gulp.task('clean', [
 	'clean-js',
+	'clean-builder-js',
 	'clean-less',
+	'clean-builder-less',
 	'clean-font',
-	'clean-img'
+	'clean-img',
+	'clean-builder-img'
 ]);
 
 gulp.task('default', function(cb) {
 	runSequence([
 //			'jshint',
 			'copy-js',
+			'builder-js',
 			'less',
+			'builder-less',
 			'copy-font',
+			'builder-img',
 			'copy-img'
 		],
 		cb);

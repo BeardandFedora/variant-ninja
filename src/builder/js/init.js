@@ -838,7 +838,7 @@ function Variant() {
     function jb(a, b) {
         try {
             var c = (JSON.parse($(".vmq").html()), $("[vmw=" + a + "]").attr("vmo"));
-            $("head link.vmx").remove(), $("head").append('<link class="vmx" href="' + c + '" rel="stylesheet" type="text/css">').append('<link class="vmx" href="../css/font-' + T(a) + '.css" rel="stylesheet" type="text/css">'), $(".vms").attr("vmr", a), 1 == b && V()
+            $("head link.vmx").remove(), $("head").append('<link class="vmx" href="' + c + '" rel="stylesheet" type="text/css">').append('<link class="vmx" href="../builder/theme/css/font-' + T(a) + '.css" rel="stylesheet" type="text/css">'), $(".vms").attr("vmr", a), 1 == b && V()
         } catch(d) {}
     }
 
