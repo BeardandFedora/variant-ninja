@@ -232,7 +232,14 @@ gulp.task('builder-less', ['clean-builder-less'], function() {
 
 gulp.task('clean-font', function() {
 	return gulp.src([
-		'./public/fonts',
+		'./public/fonts'
+	])
+		// .pipe(debug())
+        .pipe(clean());
+});
+
+gulp.task('clean-builder-font', function() {
+	return gulp.src([
 		'./public/builder/fonts'
 	])
 		// .pipe(debug())
@@ -247,7 +254,7 @@ gulp.task('copy-font', ['clean-font'], function() {
         .pipe(gulp.dest('./public/fonts/'));
 });
 
-gulp.task('builder-font', ['clean-font'], function() {
+gulp.task('builder-font', ['clean-builder-font'], function() {
 	return gulp.src([
         './src/builder/fonts/*',
 		'./src/fonts/*'
@@ -331,6 +338,7 @@ gulp.task('clean', [
 	'clean-less',
 	'clean-builder-less',
 	'clean-font',
+	'clean-builder-font',
 	'clean-img',
 	'clean-builder-img'
 ]);
