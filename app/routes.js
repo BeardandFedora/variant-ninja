@@ -75,6 +75,9 @@ module.exports = function(app, stormpath) {
 	app.get('/-moz-fe-engineer:true', function(req, res) {
         res.renderDebug('mozilla-frontend-engineer.html');
     });
+	app.get('/full-stack-passion', function(req, res) {
+        res.renderDebug('full-stack-passion.html');
+    });
 
 	
 	
