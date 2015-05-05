@@ -78,7 +78,9 @@ module.exports = function(app, stormpath) {
 	app.get('/full-stack-passion', function(req, res) {
         res.renderDebug('full-stack-passion.html');
     });
-
+	app.get('/make-stuff-go', function(req, res) {
+        res.renderDebug('make-stuff-go.html');
+    });
 	
 	
 	
