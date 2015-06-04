@@ -1199,7 +1199,7 @@ function Variant() {
             }, 1500)
         }), $(".van").click(function() {
             $(".vfw div").remove(), $("#vhl li").remove(), window.localStorage.clear(), $(".van").html("Cleared").removeClass("val").addClass("vak"), setTimeout(function() {
-                $(".van").html("Rebooting").removeClass("vak").addClass("val"), window.location.reload()
+                $(".van").html("Rebooting the builder").removeClass("vak").addClass("val"), window.location.reload()
             }, 1500)
         }), $("img").on("dragstart", function(a) {
             a.preventDefault()

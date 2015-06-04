@@ -356,7 +356,8 @@ gulp.task('default', function(cb) {
 			'copy-font',
 			'builder-font',
 			'builder-img',
-			'copy-img'
+			'copy-img',
+			'cache'
 		],
 		cb);
 });
