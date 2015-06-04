@@ -337,10 +337,10 @@ gulp.task('clean', [
 	'clean-variant-js',
 	'clean-less',
 	'clean-builder-less',
+	//'clean-img',
+	//'clean-builder-img'
 	'clean-font',
-	'clean-builder-font',
-	'clean-img',
-	'clean-builder-img'
+	'clean-builder-font'
 ]);
 
 gulp.task('default', function(cb) {
