@@ -178,6 +178,11 @@ gulp.task('clean-less', function() {
 		// .pipe(debug())
         .pipe(clean());
 });
+gulp.task('clean-builder-theme', function() {
+	return gulp.src('./public/builder/theme/css')
+		// .pipe(debug())
+        .pipe(clean());
+});
 gulp.task('clean-builder-less', function() {
 	return gulp.src('./public/builder/css')
 		// .pipe(debug())
@@ -210,6 +215,15 @@ gulp.task('css', ['clean-less'], function() {
 			compress: true
 		}))
         .pipe(gulp.dest('./public/css/'));
+});
+
+gulp.task('builder-theme', ['clean-builder-theme'], function() {
+	return gulp.src([
+		'./src/builder/theme/css/*.css'
+	])
+		
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/builder/theme/css/'));
 });
 
 gulp.task('builder-less', ['clean-builder-less'], function() {
@@ -336,6 +350,7 @@ gulp.task('clean', [
 	'clean-angular-js',
 	'clean-variant-js',
 	'clean-less',
+	'clean-builder-theme',
 	'clean-builder-less',
 	//'clean-img',
 	//'clean-builder-img'
@@ -352,6 +367,7 @@ gulp.task('default', function(cb) {
 			'variant-js',
 			'less',
 			'css',
+			'builder-theme',
 			'builder-less',
 			'copy-font',
 			'builder-font',
