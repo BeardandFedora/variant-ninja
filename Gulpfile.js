@@ -418,7 +418,7 @@ gulp.task('git-tag', function(cb) {
 				if(err) {
 					return cb(err);
 				}
-				exec('git push heroku master --tags', cb); // joel s - this is NOT ideal, where we hard code the git direction...needs elegance
+				exec('git push github master --tags', cb); // joel s - this is NOT ideal, where we hard code the git direction...needs elegance
 			});
 		});
 	});
