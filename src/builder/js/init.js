@@ -856,7 +856,7 @@ function Variant() {
         try {
             {
                 var a = JSON.parse($("#vkk").html());
-                $("<div>").addClass("vkq").append('<div class="vlq"><span>Page Options</span></div>').append('<div class="vmd"><ul class="vkx"></ul></div>').appendTo(".vmb")
+                $("<div>").addClass("vkq").append('<div class="vlq"><span>Variant Options</span></div>').append('<div class="vmd"><ul class="vkx"></ul></div>').appendTo(".vmb")
             }
             $.isArray(a.options) ? $(a.options).each(function() {
                 ub(this, ".vkx", "body, #vkk", !0)

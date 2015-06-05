@@ -1,6 +1,6 @@
 CACHE MANIFEST
-#Date Wed Apr 29 2015 04:56:05 GMT+0000 (UTC)
-#Version 0.5.1
+#Date Thu Jun 04 2015 22:26:02 GMT+0000 (UTC)
+#Version 0.6.1
 
 CACHE:
 #.
@@ -22,12 +22,7 @@ builder/fonts/variant-social.eot
 builder/fonts/variant-social.svg
 builder/fonts/variant-social.ttf
 builder/fonts/variant-social.woff
-builder/img/chooser/1.jpg
-builder/img/chooser/2.jpg
-builder/img/chooser/3.jpg
-builder/img/chooser/4.jpg
-builder/img/chooser/5.jpg
-builder/img/chooser/6.jpg
+builder/fonts/variant=icons.eot
 builder/img/fonts/cardo.png
 builder/img/fonts/helvetica.png
 builder/img/fonts/lato.png
@@ -105,21 +100,15 @@ builder/img/sections/variant-testimonials-5.jpg
 builder/img/sections/variant-utility-1.jpg
 builder/img/checkerboard.png
 builder/img/full-logo.png
-builder/img/labster-logo-30.png
-builder/img/loading.gif
 builder/img/mailchimp-cmonitor.png
 builder/img/mrare.png
 builder/img/new.png
-builder/img/see-labster.png
 builder/img/variant-features-1.png
 builder/img/variant-features-2.png
 builder/img/variant-features-3.png
 builder/img/variant.png
 builder/img/vlogo.png
 builder/img/youtube-vimeo.png
-img/1429914574_43-128.png
-img/1429914670_39-128.png
-img/1429914702_32-128.png
 img/appstore.png
 img/avatar-1.png
 img/avatar-2.png
@@ -133,7 +122,6 @@ img/cater4.jpg
 img/cater5.jpg
 img/cater6.jpg
 img/cinema.png
-img/fedora-logo.png
 img/fit1.jpg
 img/fit2.jpg
 img/fit3.jpg
@@ -205,6 +193,11 @@ img/tour6.jpg
 img/tour7.jpg
 img/tour8.jpg
 img/tour9.jpg
+img/variant-ninja.png
+fonts/launchkit-fonts.eot
+fonts/launchkit-fonts.svg
+fonts/launchkit-fonts.ttf
+fonts/launchkit-fonts.woff
 js/angulartics.min.js
 js/detectizr.min.js
 js/flexslider.min.js
@@ -223,7 +216,6 @@ js/scripts.js
 js/smooth-scroll.min.js
 js/spectragram.min.js
 js/twitterfetcher.min.js
-js/variant.min.js
 js/velocity.min.js
 js/waves.min.js
 styles/labster-material.css
@@ -241,6 +233,7 @@ styles/theme-rose.css
 styles/theme-tote.css
 styles/theme-velvet.css
 css/main.css
+css/main.min.css
 # end_inject_resources
 
 

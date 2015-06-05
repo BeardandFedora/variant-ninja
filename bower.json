@@ -13,7 +13,8 @@
     "waitForImages": "~1.4.2",
     "yaml.js": "~0.1.4",
     "jsondiffpatch": "https://github.com/BeardandFedora/jsondiffpatch.git",
-    "Context.js": "*"
+    "Context.js": "*",
+    "pace": "~1.0.2"
   },
   "main": [
     "/public/js/variant.min.js"

@@ -1,22 +1,29 @@
 <!doctype html>
-<html class="no-js" lang="en" <%- cache ? ' manifest="cache.manifest"' : '' %>>
+<html class="no-js" lang="en" <%- cache ? ' manifest="ccache.manifest"' : '' %>>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Variant Ninja Page Builder</title>
+	<script data-pace-options='{ "ajax": true, "document": true, "eventLag": true}' src=bower-libs/pace/pace.js></script>
+  	<link href="bower-libs/pace/themes/purple/pace-theme-center-atom.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="builder/css/variant.min.css">
-    <link href="builder/theme/css/theme.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="builder/theme/css/theme.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico" />
     <style>
-        nav.fixed, nav.overlay {
+        .pace .pace-progress:before {
+			padding: 14% 0 7px;
+			width: 42%;
+			height: 67%;
+		}
+		nav.fixed, nav.overlay {
             left: 48px;
         }
         .embed-video-container:before {
@@ -48,7 +55,7 @@
             position:fixed;
             width:100%;
             height:100%;
-            z-index:9999;
+            z-index:1999;
             background:#fff;
             font-family:Roboto, "Helvetica Neue", Helvetica, Helvetica, Arimo, Arial, sans-serif!important;
             font-smoothing:antialiased;
@@ -126,6 +133,13 @@
             margin-left:-15px;
             top:37%;
         }
+		footer {padding-top: 25px;}
+		footer a.btn.btn-filled {
+    		padding-top: 15px;
+		}
+		form.form-email {
+    		margin-bottom: 25px;
+		}
         @keyframes loading {
             0% {
                 -moz-transform:rotate(0deg)
@@ -173,7 +187,7 @@
                     <div class="vlc">
                         <span class="oi" data-glyph="lightbulb"></span>
                         <p>
-                            Right-click elements on the page to edit them.
+                            Right-click elements in the builder to edit their attributes.
                         </p>
                     </div>
                 </li>
@@ -188,19 +202,26 @@
                 </li>
 
                 <li>
-                    <div class="vlc">
+                    <div class="vlc hide hidden">
                         <span class="oi" data-glyph="lightbulb"></span>
                         <p>
                             Get HTML for copy/paste or download as .html page
                         </p>
                     </div>
                 </li>
-
                 <li>
                     <div class="vlc">
                         <span class="oi" data-glyph="lightbulb"></span>
                         <p>
-                            Export page as .variant file for later editing.
+                            Save your pages to work on later.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="vlc hide hidden">
+                        <span class="oi" data-glyph="lightbulb"></span>
+                        <p>
+                            Export page as .variant file for editing later.
                         </p>
                     </div>
                 </li>
@@ -216,9 +237,7 @@
             </ul>
         </div>
 
-        <div class="vld">
-			<img src="../builder/img/loading.gif">
-
+        <div class="vld hide hidden">
         </div>
 
         <div class="vhb">
@@ -227,7 +246,7 @@
 
         <div class="vha">
             <a target="_blank" href="http://beardandfedora.com/">
-                <img class="vlb hide hidden" alt="Variant Ninja Static Landing Page Builder" src="img/variant-ninja.png">
+                <img class="vlb" alt="Variant Ninja Static Landing Page Builder" src="img/variant-ninja.png">
             </a>
             <span>&copy; Copyright 2015 <a href="http://beardandfedora.com" target="_blank">Beard & Fedora</a><br>Some Rights Reserved</span>
         </div>
@@ -268,7 +287,7 @@
                     <div class="vlo vlp">
 
                         <div class="vlq">
-                            <span>Smart Sites</span>
+                            <span>My Variants</span>
                         </div>
 
                         <div class="vhs vgc">Save Page As</div>
@@ -299,7 +318,7 @@
                     <div class="vlv vlp vhr">
 
                         <div class="vlq">
-                            <span class="vcr">Page Content</span>
+                            <span class="vcr">Variant Content</span>
                         </div>
 
                         <div class="vlw">
@@ -332,7 +351,7 @@
                             <div class="vem empty-vem">
                             </div>
 
-                            <div class="vac">
+                            <div class="vac btn-primary fab">
                                 <span></span>
                             </div>
 
@@ -348,7 +367,7 @@
 
                             <div class="vgt">
 
-                                <div class="vlz">
+                                <div class="vlz text-info">
                                     <div class="vma">
                                         <span>Filter</span>
                                     </div>
@@ -383,13 +402,13 @@
                     <div class="vmb vlp">
 
                         <div class="vlq">
-                            <span>Page Style</span>
+                            <span>Variant Style</span>
                         </div>
 
                         <div class="vmd vnb empty-vmd">
 
                             <div class="vho vmu vih">
-                                <span class="vly oi" data-glyph="droplet">Colour Scheme</span>
+                                <span class="vly oi" data-glyph="droplet">Color Scheme</span>
                                 <ul class="vay">
 
                                 </ul>
@@ -722,10 +741,10 @@
 
     <div class="global-vfr vin vkf">
         <div class="vew">
-            <div class="vhs vap val">Clear Navs</div>
-            <div class="vhs vao val">Clear Footers</div>
-            <div class="vhs vaq val">Clear Pages</div>
-            <div class="vhs van val">Delete All</div>
+            <a href="#" class="vhs vap val builder-btn builder-btn-success btn-block">Clear Navs</a>
+            <a href="#" class="vhs vao val builder-btn builder-btn-primary btn-block">Clear Footers</a>
+            <a href="#" class="vhs vaq val builder-btn builder-btn-info btn-block">Clear Pages</a>
+            <a href="#" class="vhs van val builder-btn builder-btn-danger btn-block">Delete All</a>
         </div>
         <img alt="Variant Ninja" src="img/variant-ninja.png">
         <p>
@@ -3273,7 +3292,7 @@
                                 <li>
                                     <a href="#">
                                         <i class="icon-design-pencil-rule-streamline"></i>
-                                        <span>Lab Guide</span>
+                                        <span>Site Guide</span>
                                     </a>
                                 </li>
 
@@ -3687,8 +3706,8 @@
     &lt;meta property=&quot;og:image&quot; content=&quot;http://variant.ninja/images/logo.png&quot;&gt;
     &lt;!-- twitter cards --&gt;
     &lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
-    &lt;meta name=&quot;twitter:site&quot; content=&quot;@labster&quot;&gt;
-    &lt;meta name=&quot;twitter:url&quot; content=&quot;http://www.labster.com&quot;&gt;
+    &lt;meta name=&quot;twitter:site&quot; content=&quot;@beardandfedora&quot;&gt;
+    &lt;meta name=&quot;twitter:url&quot; content=&quot;http://www.beardandfedora.com&quot;&gt;
     &lt;meta name=&quot;twitter:title&quot; content=&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.tagline }}&quot;&gt;
     &lt;meta name=&quot;twitter:description&quot; content=&quot;{{ site.description }}&quot;&gt;
     &lt;meta name=&quot;twitter:image&quot; content=&quot;http://variant.ninja/img/logo.png&quot;&gt;
@@ -3816,8 +3835,8 @@
                 "name": "Velvet",
                 "colours": ["#E24548"]
             }, {
-                "name": "Rose",
-                "colours": ["#C956AE"]
+                "name": "Purple",
+                "colours": ["#9C27B0"]
             }, {
                 "name": "Gumboot",
                 "colours": ["#F27244"]
