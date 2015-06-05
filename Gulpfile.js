@@ -178,6 +178,11 @@ gulp.task('clean-less', function() {
 		// .pipe(debug())
         .pipe(clean());
 });
+gulp.task('clean-theme', function() {
+	return gulp.src('./public/css/theme*.css')
+		// .pipe(debug())
+        .pipe(clean());
+});
 gulp.task('clean-builder-theme', function() {
 	return gulp.src('./public/builder/theme/css')
 		// .pipe(debug())
@@ -191,8 +196,8 @@ gulp.task('clean-builder-less', function() {
 
 gulp.task('less', ['clean-less'], function() {
 	return gulp.src([
-		'./src/less/main.less',
-		'./src/less/themes/*.less'
+		'./src/less/main.less'
+		// './src/less/themes/*.less'
 	])
 		.pipe(less({
 			compress: true
@@ -215,6 +220,15 @@ gulp.task('css', ['clean-less'], function() {
 			compress: true
 		}))
         .pipe(gulp.dest('./public/css/'));
+});
+// needs t away in favor of LESS
+gulp.task('css-theme', ['clean-theme'], function() {
+	return gulp.src([
+		'./src/css/theme*.css'
+	])
+		
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('builder-theme', ['clean-builder-theme'], function() {
