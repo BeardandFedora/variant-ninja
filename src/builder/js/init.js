@@ -469,7 +469,7 @@ function Variant() {
                 -1 == d.indexOf(a) && (d += '<div class="vgh" vbp="' + a + '">' + a + "</div>")
             }), a = c.attr("icons"), "undefined" != typeof a && a !== !1 && (a = c.attr("icons").split(","), a.forEach(function(a) {
                 f += '<img class="vgj" src="builder/img/' + a + '.png" />'
-            })), b += '<div class="vgl" vbp="' + $(this).attr("vbp") + '" vgv="' + $(this).attr("id") + '"><img delay-src="builder/img/sections/' + $(this).attr("id") + '.jpg"/>' + f + '<span class="vjl">' + $(this).attr("vbr") + "</span></div>"
+            })), b += '<div title="Add to page" class="vgl" vbp="' + $(this).attr("vbp") + '" vgv="' + $(this).attr("id") + '"><img delay-src="builder/img/sections/' + $(this).attr("id") + '.jpg"/>' + f + '<span class="vjl">' + $(this).attr("vbr") + "</span></div>"
         }), a.html(b), c.append(d)
     }
 
@@ -624,7 +624,7 @@ function Variant() {
     }
 
     function X(a, b) {
-        $(".vfw").prepend('<div class="ves" vjh="' + a + '" state-id="' + b + '"><span class="oi vdj" data-glyph="data-transfer-download"></span><span class="vfx">' + a + '</span><span class="vbz oi" data-glyph="x"></span></div>'), Pb && $(".vdj").remove()
+        $(".vfw").prepend('<div title="Open ' + a + '" class="ves" vjh="' + a + '" state-id="' + b + '"><span class="oi vdj" data-glyph="data-transfer-download"></span><span class="vfx">' + a + '</span><span title="Delete ' + a + '" data-toggle="tooltip" data-placement="top"  class="vbz oi" data-glyph="x"></span></div>'), Pb && $(".vdj").remove()
     }
 
     function Y(b, c) {

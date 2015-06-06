@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" <%- cache ? ' manifest="cache.manifest"' : '' %>>
+<html class="no-js" lang="en" <%- cache ? ' manifest="ccache.manifest"' : '' %>>
 
 <head>
     <meta charset="utf-8">
@@ -291,8 +291,8 @@
                             <span>My Variants</span>
                         </div>
 
-                        <div class="vhs vgc">Save Page As</div>
-                        <div class="vhs ved">Import</div>
+                        <div class="vhs vgc builder-btn builder-btn-primary">Save Page As</div>
+                        <div class="vhs ved builder-btn builder-btn-primary">Import</div>
                         <input type="file" class="vef" name="vef[]">
 
                         <div class="vmd">
@@ -302,7 +302,7 @@
                             </div>
                         </div>
 
-                        <div class="vls">
+                        <div class="builder-btn builder-btn-info vls" style="padding-top: 0px !important;">
 
                             <div class="vlt">
                                 <span>Export</span><span class="oi" data-glyph="caret-bottom"></span>
@@ -389,11 +389,11 @@
 
                         <div class="vls">
 
-                            <div class="vdq">
+                            <div class="vdq builder-btn builder-btn-primary">
                                 <span class="vhq">Get HTML</span>
                             </div>
-                            <div class="vhs upload vaj vhq" style="margin-left: 6px">Upload</div>
-                            <div class="vhs download vaj vil vgy" style="margin-left: 6px">Download</div>
+                            <div class="vhs upload vaj vhq builder-btn builder-btn-primary" style="margin-left: 6px">Upload</div>
+                            <div class="vhs download vaj vil vgy builder-btn builder-btn-primary" style="margin-left: 6px">Download</div>
 
                         </div>
 
@@ -426,11 +426,11 @@
 
                         <div class="vls">
 
-                            <div class="vdq">
+                            <div class="vdq builder-btn builder-btn-primary">
                                 <span class="vhq">Get HTML</span>
                             </div>
-                            <div class="vhs upload vaj vhq" style="margin-left: 6px">Upload</div>
-                            <div class="vhs download vaj vil vgy" style="margin-left: 6px">Download</div>
+                            <div class="vhs upload vaj vhq builder-btn builder-btn-primary" style="margin-left: 6px">Upload</div>
+                            <div class="vhs download vaj vil vgy builder-btn builder-btn-primary" style="margin-left: 6px">Download</div>
 
                         </div>
 
@@ -723,7 +723,7 @@
                         Please update the newly created landing page (the .html file):
                         <br>
 
-                        <a class='btn btn-primary btn-block btn-filled' href='javascript:;'>
+                        <a class='builder-btn builder-btn-primary btn-block btn-filled' href='javascript:;'>
                     Select Your File
 					<input type="file" style='position:absolute;z-index:2;top:114px;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40" onchange='$("#upload-file-info").html($(this).val());'>
                 </a>
