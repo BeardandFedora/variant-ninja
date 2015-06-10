@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var vhost = require('vhost')
 var compression = require('compression');
 var serveStatic = require('serve-static');
 //var extend = require('xtend');
@@ -9,11 +8,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
 var multer = require('multer');
-var flash    = require('connect-flash');
 var stormpath = require('express-stormpath');
-var session      = require('express-session');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -40,16 +36,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(multer({
 	dest: __dirname + '/../views/', // this is where new pages are uploaded via Multer
 	rename: function (fieldname, filename) {
-    	return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
+    	return filename.replace(/\W+/g, '-').toLowerCase() + Date.now();
   	},
 	onFileUploadStart: function (file, req, res) {
   		console.log(file.fieldname + ' is starting to upload...')
 	},
 	onFileUploadComplete: function (file, req, res) {
-  		console.log(file.fieldname + ' uploaded to  ' + file.path)
+  		console.log(file.fieldname + ' uploaded to  ' + file.path);
 	},
 	onFilesLimit: function () {
-  		console.log('You crossed the file limit! Are you adding an HTML file?')
+  		console.log('You crossed the file limit! Are you adding an HTML file?');
 	}
 })); 
 

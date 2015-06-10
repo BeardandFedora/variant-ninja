@@ -1,3 +1,5 @@
+var session      = require('express-session');
+
 module.exports = function(app, stormpath) {
     // Set up the Stormpath application
     app.use(stormpath.init(app, {

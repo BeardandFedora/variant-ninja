@@ -1,3 +1,7 @@
+var vhost = require('vhost');
+var flash    = require('connect-flash');
+var methodOverride = require('method-override');
+
 module.exports = function(app, express, vhost, stormpath, favicon, path, logger, bodyParser, methodOverride, cookieParser) {
 	
 /*
