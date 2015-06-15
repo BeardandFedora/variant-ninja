@@ -221,7 +221,7 @@ body [contenteditable] { cursor: text; }
 .vgw.vmg{ opacity: 1; }
 .vgw.vmg .oi:before{ content:'\e08a'; }
 
-.vdq{box-shadow: none !important;padding:11px 10px 0 10px !important;    border-radius: 0 !important; display: inline-block; height:48px; line-height: 48px; font-size: 13px; text-transform: uppercase; font-weight: 500; cursor: pointer; }
+.vdq{box-shadow: none !important;padding:12px 10px 0 10px !important;    border-radius: 0 !important; display: inline-block; height:48px; line-height: 48px; font-size: 13px; text-transform: uppercase; font-weight: 500; cursor: pointer; }
 .vgr, .vdv{ font-size: 13px; text-transform: uppercase; font-weight: 500; margin-top: 16px; margin-left: 32px; cursor: pointer; height: 16px; line-height: 16px; opacity: .4; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; position: absolute; z-index: 99; }
 .vgr .oi, .vdv .oi{ position: relative; top: 1px; }
 .vgr:hover{ opacity: 1; }

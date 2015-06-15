@@ -1,6 +1,6 @@
 CACHE MANIFEST
-#Date Wed Jun 10 2015 13:48:04 GMT+0000 (UTC)
-#Version 0.6.4
+#Date Mon Jun 15 2015 16:36:50 GMT+0000 (UTC)
+#Version 0.6.6
 
 CACHE:
 #.
@@ -109,6 +109,9 @@ builder/img/variant-features-3.png
 builder/img/variant.png
 builder/img/vlogo.png
 builder/img/youtube-vimeo.png
+img/1429914574_43-128.png
+img/1429914670_39-128.png
+img/1429914702_32-128.png
 img/appstore.png
 img/avatar-1.png
 img/avatar-2.png
@@ -122,6 +125,7 @@ img/cater4.jpg
 img/cater5.jpg
 img/cater6.jpg
 img/cinema.png
+img/fedora-logo.png
 img/fit1.jpg
 img/fit2.jpg
 img/fit3.jpg
@@ -202,6 +206,7 @@ fonts/launchkit-fonts.eot
 fonts/launchkit-fonts.svg
 fonts/launchkit-fonts.ttf
 fonts/launchkit-fonts.woff
+js/angulartics.min.js
 js/detectizr.min.js
 js/flexslider.min.js
 js/form-plugins.js
@@ -236,6 +241,19 @@ styles/theme-rose.css
 styles/theme-tote.css
 styles/theme-velvet.css
 css/main.min.css
+css/theme-blue.css
+css/theme-business.css
+css/theme-cacao.css
+css/theme-chipotle.css
+css/theme-deepblue.css
+css/theme-emerald.css
+css/theme-fairsky.css
+css/theme-gumboot.css
+css/theme-olive.css
+css/theme-rose.css
+css/theme-tote.css
+css/theme-velvet.css
+css/theme.css
 # end_inject_resources
 
 

@@ -102,6 +102,9 @@ module.exports = function(app, stormpath) {
 	app.get('/make-stuff-go', function(req, res) {
         res.renderDebug('make-stuff-go.html');
     });
+	app.get('/product-stack', function(req, res) {
+        res.renderDebug('experience-is-the-product.html');
+    });
 	
 	
 
