@@ -11,6 +11,16 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var stormpath = require('express-stormpath');
 
+/* this is used to force SSL - required for security */
+app.use(function(req, res, next) {
+    if (req.headers['x-forwarded-proto'] != 'https') {
+        res.redirect('https://' + req.headers.host + req.path);
+    }
+    else {
+        return next();
+    }
+});
+
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,OPTIONS');
