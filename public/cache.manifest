@@ -1,6 +1,6 @@
 CACHE MANIFEST
-#Date Mon Jun 15 2015 16:36:50 GMT+0000 (UTC)
-#Version 0.6.6
+#Date Thu Jun 18 2015 13:09:15 GMT+0000 (UTC)
+#Version 0.6.7
 
 CACHE:
 #.
@@ -118,6 +118,8 @@ img/avatar-2.png
 img/avatar-3.png
 img/baf-logo.png
 img/baf-variant-ninja-logo.png
+img/buddha-focus-green.jpg
+img/buddha-focus-sat.jpg
 img/cater1.jpg
 img/cater2.jpg
 img/cater3.jpg
@@ -224,6 +226,7 @@ js/scripts.js
 js/smooth-scroll.min.js
 js/spectragram.min.js
 js/twitterfetcher.min.js
+js/variant.min.js
 js/velocity.min.js
 js/waves.min.js
 styles/labster-material.css
@@ -240,6 +243,7 @@ styles/theme-olive.css
 styles/theme-rose.css
 styles/theme-tote.css
 styles/theme-velvet.css
+css/main.css
 css/main.min.css
 css/theme-blue.css
 css/theme-business.css
