@@ -174,7 +174,12 @@ gulp.task('copy-js', ['clean-js'], function() {
  */
 
 gulp.task('clean-less', function() {
-	return gulp.src('./public/css/**/*')
+	return gulp.src('./public/css/main.css')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('clean-css', function() {
+	return gulp.src('./public/css/main.min.css')
 		// .pipe(debug())
         .pipe(clean());
 });
@@ -206,7 +211,7 @@ gulp.task('less', ['clean-less'], function() {
         .pipe(gulp.dest('./public/css/'));
 });
 
-gulp.task('css', ['clean-less'], function() {
+gulp.task('css', ['clean-css'], function() {
 	return gulp.src([
 		'./src/css/icons.min.css',
 		'./src/css/flexslider.min.css',
