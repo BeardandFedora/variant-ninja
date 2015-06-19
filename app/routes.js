@@ -13,7 +13,9 @@ module.exports = function(app, stormpath) {
 	app.get('/build', stormpath.loginRequired, function(req, res) {
     	res.renderDebug('builder.html');
 	});	
-	
+	app.get('/buildr', stormpath.loginRequired, function(req, res) {
+    	res.renderDebug('secure-builder.html');
+	});		
 	
     /* KISS. A keep it simple routing scheme here... forever. This app is intended to
      * be a single page app with meta pages, both of which we can assign routes for.
