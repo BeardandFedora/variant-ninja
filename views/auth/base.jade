@@ -12,54 +12,26 @@ html(class='no-js', lang='en')
     meta(content='#{description}', name='description')
     meta(content='width=device-width', name='viewport')
     link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800', rel='stylesheet', type='text/css')
-    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
-    link(href='//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css', rel='stylesheet')
+    script(data-pace-options='{ "ajax": true, "document": true, "eventLag": true}', src='/bower-libs/pace/pace.js')
+    link(href='/bower-libs/pace/themes/blue/pace-theme-minimal.css', rel='stylesheet')
+    link(href='/css/main.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/css/main.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/css/theme-blue.css', rel='stylesheet', type='text/css', media='all')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+    script(src='/js/modernizr-2.8.3.min.js')
+    script(src='/js/detectizr.min.js')
     style.
-      html,
-      body {
-        height: 100%;
-      }
-
-      @media (max-width: 767px) {
-        html,
-        body {
-          padding: 0 4px;
-        }
-      }
-
-      body {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      body,
-      div,
-      p,
-      a,
-      label {
-        font-family: "Open Sans";
-        font-size: 14px;
-        font-weight: 400;
-        color: #484848;
-      }
-
-      a {
-        color: #0072dd;
-      }
-
-      p {
-        line-height: 21px;
-      }
-
-      .container {
-        max-width: 620px;
-      }
-
-      .logo {
-        margin: 34px auto 25px auto;
-        display: block;
-      }
-
+      .nav-1 .logo {margin-top: 5px;max-height: 72px;}
+      .nav-1.shrink .logo {margin-top: 5px;max-height: 55px;}
+      .nav-1 .menu {margin-top: 31px;}
+      .nav-1.shrink .menu {margin-top: 21px;}
+      .footer-1 img {max-height: 35px;}
+      .avatar {max-width: 45px;}
+      .tooltip {font-size: .9em}
+      .btn {border-radius: 5px;}
       .btn-sp-green {
         height: 45px;
         line-height: 22.5px;
@@ -239,7 +211,7 @@ html(class='no-js', lang='en')
       }
 
       .login-view .box {
-        background-color: #f6f6f6;
+        background-color: #fff;
         padding: 0;
       }
 
@@ -354,7 +326,6 @@ html(class='no-js', lang='en')
         margin-bottom: 15px;
       }
 
-      .login, .register { display: table; }
       .va-wrapper { display: table-cell; width: 100%; vertical-align: middle; }
       .custom-container { display: table-row; height: 100%; }
 
@@ -366,8 +337,100 @@ html(class='no-js', lang='en')
     block head
 
   body(class='#{bodytag}')
+  
+    .nav-container
+      nav.nav-1
+        .navbar
+          .container
+            .row
+              .col-md-3.col-sm-6.col-xs-4
+                a.scroll.inner-link(href='#')
+                  img.logo(alt='Variant Ninja', src='/img/variant-ninja.png')
+              |                     
+              .col-md-3.text-right.col-sm-6.col-md-push-6.col-xs-8
+                a.btn.btn-filled.cta(href='http://j.mp/GetMySmartSite', analytics-category='CTA', analytics-event='Top Nav CTA', analytics-on='', data-toggle='tooltip', data-placement='left', title='Hassle Free Higher Conversions') Need An Account?
+                |                         
+                .mobile-toggle
+                  .upper
+                  |                             
+                  .middle
+                  |                             
+                  .lower
+              |                     
+              .col-md-6.text-center.col-md-pull-5.col-sm-12.col-xs-12
+                ul.menu.pull-left
+                  li
+                    a(href='/', analytics-category='Top Nav', analytics-event='About', analytics-on='')
+                      | Home
+                  |                             
+                  li
+                    a(href='/#about', analytics-category='Top Nav', analytics-event='About', analytics-on='')
+                      | About
+                  |                             
+                  li
+                    a(href='/#pricing', analytics-category='Top Nav', analytics-event='Pricing', analytics-on='')
+                      | Pricing
+                  |                             
+                  li
+                    a(href='/#features', analytics-category='Top Nav', analytics-event='Features', analytics-on='')
+                      | Features
+                  |                             
+                  li.has-dropdown
+                    a(href='/campaigns', analytics-category='Top Nav', analytics-event='Templates', analytics-on='')
+                      | Templates
+                    |                                 
+                    ul.subnav
+                      li
+                        a(href='/campaigns', analytics-category='Top Nav', analytics-event='Gallery', analytics-on='')
+                          strong
+                            span.fa.fa-th-large(style='padding-right: 7px;')
+                            |  Gallery
+                      |                                     
+                      li
+                        a(href='/multi', analytics-category='Top Nav', analytics-event='-> Startup', analytics-on='')
+                          | Startup
+                      |                                     
+                      li
+                        a(href='/adventure', analytics-category='Top Nav', analytics-event='-> Travel', analytics-on='')
+                          | Travel
+                      |                                     
+                      li
+                        a(href='/agency', analytics-category='Top Nav', analytics-event='-> Agency', analytics-on='')
+                          | Agency
+                      |                                     
+                      li
+                        a(href='/fitness', analytics-category='Top Nav', analytics-event='-> Fitness', analytics-on='')
+                          | Fitness
+                      |                                     
+                      li
+                        a(href='/cater', analytics-category='Top Nav', analytics-event='-> Catering', analytics-on='')
+                          | Catering
+                      |                                     
+                      li
+                        a(href='/learn', analytics-category='Top Nav', analytics-event='-> Learning', analytics-on='')
+                          | Learning
+                  |                             
+                  li
+                    a.text-primary(href='/login', analytics-category='Top Nav', analytics-event='Login', analytics-on='')
+                      span.fa.fa-sign-in.text-primary
+                      |  Login
+
 
     block body
 
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-    script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+    script(src='/js/variant.min.js')
+    script(src='/js/flexslider.min.js')
+    script(src='/js/smooth-scroll.min.js')
+    script(src='/js/placeholders.min.js')
+    script(src='/js/twitterfetcher.min.js')
+    script(src='/js/spectragram.min.js')
+    script(src='/js/waves.min.js')     
+    script(src='/js/jquery.easing.1.3.js')
+    script(src='/js/velocity.min.js')
+    script(src='/js/form-plugins.js')
+    script(src='/js/scripts.js')
+    script(src='/js/main.js')
+    script.
+      $(function () {$('[data-toggle="tooltip"]').tooltip()})

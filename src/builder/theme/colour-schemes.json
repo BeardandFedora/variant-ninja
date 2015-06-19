@@ -1,7 +1,7 @@
 {
 	"original":
 	{
-		"name":"Launchkit",
+		"name":"Variant Ninja",
 		"pathToOriginal":"mixture/public/css/less/",
 		"originalFileName":"theme",
 		"colours":["#6dc77a"]
@@ -33,12 +33,12 @@
 			"colours":["#233C59"]
 		},
 		{
-			"name":"Velvet",
+			"name":"Amber",
 			"colours":["#E24548"]
 		},
 		{
-			"name":"Rose",
-			"colours":["#C956AE"]
+			"name":"Velvet",
+			"colours":["#9C27B0"]
 		},
 		{
 			"name":"Gumboot",

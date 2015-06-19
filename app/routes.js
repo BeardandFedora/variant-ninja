@@ -72,7 +72,7 @@ module.exports = function(app, stormpath) {
         res.renderDebug('examples/cater.html');
     });
     app.get('/learn', function(req, res) {
-        res.renderDebug('examples/learn.html');
+        res.renderDebug('examples/learning.html');
     });
     app.get('/news', function(req, res) {
         res.renderDebug('examples/news.html');
