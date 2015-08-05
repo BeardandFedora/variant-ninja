@@ -620,7 +620,7 @@
 
         </div>
 
-        <div class="vdz" vbv="hero1.jpg,hero2.jpg,hero3.jpg,hero4.jpg,hero5.jpg,hero6.jpg,hero7.jpg,hero8.jpg,hero9.jpg,hero10.jpg,hero11.jpg,hero12.jpg,hero13.jpg,hero14.jpg,hero15.jpg,hero16.jpg,small1.jpg,small2.jpg,small3.jpg,small4.jpg,small5.jpg,small6.jpg,small7.jpg,small8.jpg,small9.jpg,baf-logo.png,variant-ninja.png,cinema.png,ipad.png,ipad2.png,phone1.png,poster1.jpg,nyc1.jpg,nyc1.jpg,nyc2.jpg,nyc3.jpg,nyc4.jpg,nyc5.jpg,nyc6.jpg,nycw1.jpg,nycw2.jpg,nycw3.jpg,tour1.jpg,tour2.jpg,tour3.jpg,tour4.jpg,tour5.jpg,tour6.jpg,tour7.jpg,tour8.jpg,tour9.jpg,appstore.png,googleplay.png,fit1.jpg,fit2.jpg,fit3.jpg,fit4.jpg,fit5.jpg,fit6.jpg,fit7.jpg,fit8.jpg,cater1.jpg,cater2.jpg,cater3.jpg,cater4.jpg,cater5.jpg,cater6.jpg,avatar-1.png,avatar-2.png,avatar-3.png">
+        <div class="vdz" vbv="hero1.jpg,hero2.jpg,hero3.jpg,hero4.jpg,hero5.jpg,hero6.jpg,hero7.jpg,hero8.jpg,hero9.jpg,hero10.jpg,hero11.jpg,hero12.jpg,hero13.jpg,hero14.jpg,hero15.jpg,hero16.jpg,small1.jpg,small2.jpg,small3.jpg,small4.jpg,small5.jpg,small6.jpg,small7.jpg,small8.jpg,small9.jpg,variant-ninja.png,cinema.png,ipad.png,ipad2.png,phone1.png,poster1.jpg,nyc1.jpg,nyc1.jpg,nyc2.jpg,nyc3.jpg,nyc4.jpg,nyc5.jpg,nyc6.jpg,nycw1.jpg,nycw2.jpg,nycw3.jpg,tour1.jpg,tour2.jpg,tour3.jpg,tour4.jpg,tour5.jpg,tour6.jpg,tour7.jpg,tour8.jpg,tour9.jpg,appstore.png,googleplay.png,fit1.jpg,fit2.jpg,fit3.jpg,fit4.jpg,fit5.jpg,fit6.jpg,fit7.jpg,fit8.jpg,cater1.jpg,cater2.jpg,cater3.jpg,cater4.jpg,cater5.jpg,cater6.jpg,avatar-1.png,avatar-2.png,avatar-3.png">
             <input type="file" class="vch" name="vci[]" multiple="multiple">
             <div class="vdx">
             </div>
@@ -3686,8 +3686,8 @@
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;{{ site.title }}&lt;/title&gt;
-	&lt;meta name=&quot;description&quot; content=&quot;{{ site.description }}&quot;&gt;
+    &lt;title&gt;{{page.title}}&lt;/title&gt;
+	&lt;meta name=&quot;description&quot; content=&quot;{{page.description}}&quot;&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;    
 	&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;True&quot;&gt;
@@ -3700,19 +3700,19 @@
     &lt;link rel=&quot;shortcut icon&quot; href=&quot;img/icon-small.png&quot; /&gt;
 
    	&lt;!-- open graph --&gt;
-    &lt;meta property=&quot;og:url&quot; content=&quot;http://variant.ninja&quot;&gt;
-    &lt;meta property=&quot;og:title&quot; content=&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.tagline }}&quot;&gt;
-    &lt;meta property=&quot;og:description&quot; content=&quot;{{ site.description }}&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;{{http://page.url}}&quot;&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;{{page.title}}&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;{{page.description}}&quot;&gt;
     &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
-    &lt;meta property=&quot;og:image&quot; content=&quot;http://variant.ninja/images/logo.png&quot;&gt;
+    &lt;meta property=&quot;og:image&quot; content=&quot;{{http://page.logo.png}}&quot;&gt;
     &lt;!-- twitter cards --&gt;
     &lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
-    &lt;meta name=&quot;twitter:site&quot; content=&quot;@beardandfedora&quot;&gt;
-    &lt;meta name=&quot;twitter:url&quot; content=&quot;http://www.beardandfedora.com&quot;&gt;
-    &lt;meta name=&quot;twitter:title&quot; content=&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.tagline }}&quot;&gt;
-    &lt;meta name=&quot;twitter:description&quot; content=&quot;{{ site.description }}&quot;&gt;
-    &lt;meta name=&quot;twitter:image&quot; content=&quot;http://variant.ninja/img/logo.png&quot;&gt;
-    &lt;link rel=&quot;canonical&quot; href=&quot;http://variant.ninja&quot;&gt;
+    &lt;meta name=&quot;twitter:site&quot; content=&quot;{{@YOURtwitter}}&quot;&gt;
+    &lt;meta name=&quot;twitter:url&quot; content=&quot;{{http://www.page.url.com}}&quot;&gt;
+    &lt;meta name=&quot;twitter:title&quot; content=&quot;{{page.title}}&quot;&gt;
+    &lt;meta name=&quot;twitter:description&quot; content=&quot;{{page.description}}&quot;&gt;
+    &lt;meta name=&quot;twitter:image&quot; content=&quot;{{page.logo.png}}&quot;&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;{{http://page.url}}&quot;&gt;
     &lt;!--[if lt IE 9]&gt;
         	&lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;
         	&lt;script src=&quot;https://oss.maxcdn.com/libs/respond/js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
@@ -3733,10 +3733,10 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, &#39;script&#39;, &#39;//www.google-analytics.com/analytics.js&#39;, &#39;ga&#39;);
-		ga(&#39;create&#39;, &#39;UA-XXXXXXXX-XX&#39;, &#39;auto&#39;);
+		ga(&#39;create&#39;, &#39;UA-XXXXXXXX-XX&#39;, &#39;auto&#39;);  //ENTER GA CODE
 		ga(&#39;require&#39;, &#39;linkid&#39;, &#39;linkid.js&#39;);
 		ga(&#39;set&#39;, &#39;contentGroup2&#39;, &#39;Variant Landing Pages&#39;); 
-		ga(&#39;_setDomainName&#39;, &#39;XXX.XXX.com&#39;); //ENTER YOUR GA CODE HERE
+		ga(&#39;_setDomainName&#39;, &#39;XYZ.123.com&#39;); //ENTER GA DOMAIN
 		ga(&#39;_setAllowLinker&#39;, true);
 		ga(&#39;send&#39;, &#39;pageview&#39;);
     &lt;/script&gt;
@@ -3758,7 +3758,7 @@
             j.async = true;
             j.src = &#39;//www.googletagmanager.com/gtm.js?id=&#39; + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, &#39;script&#39;, &#39;dataLayer&#39;, &#39;GTM-XXXXXX&#39;); //ENTER YOUR GTM CODE HERE AND ABOVE IN IFRAMR
+        })(window, document, &#39;script&#39;, &#39;dataLayer&#39;, &#39;GTM-XXXXXX&#39;); //ENTER GTM CODE
     &lt;/script&gt;
     &lt;!-- End Google Tag Manager --&gt;
 		&lt;link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/&gt;
@@ -3782,9 +3782,22 @@
 -->
 
 <div id="vfv" class="vih"><pre><code id="vif" name="Original">
-    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;//variant.ninja/js/variant.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/variant.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/flexslider.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/smooth-scroll.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/placeholders.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/twitterfetcher.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/spectragram.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/waves.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/jquery.easing.1.3.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/velocity.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/form-plugins.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;//variant.ninja/js/main.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;$(function () {$(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip()})&lt;/script&gt;
+	
 &lt;/body&gt;
 
 &lt;/html&gt;
