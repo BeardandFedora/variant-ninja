@@ -1,6 +1,6 @@
 CACHE MANIFEST
-#Date Thu Jun 18 2015 13:09:15 GMT+0000 (UTC)
-#Version 0.6.7
+#Date Mon Aug 17 2015 21:33:23 GMT+0000 (UTC)
+#Version 0.6.13
 
 CACHE:
 #.
@@ -117,7 +117,6 @@ img/avatar-1.png
 img/avatar-2.png
 img/avatar-3.png
 img/baf-logo.png
-img/baf-variant-ninja-logo.png
 img/buddha-focus-green.jpg
 img/buddha-focus-sat.jpg
 img/cater1.jpg
@@ -162,6 +161,13 @@ img/l2.png
 img/l3.png
 img/l4.png
 img/l5.png
+img/landing-page-1.png
+img/landing-page-2.png
+img/landing-page-3.png
+img/landing-page-4.png
+img/landing-page-5.png
+img/landing-page-6.png
+img/landing_page_icon.png
 img/logo-dark.png
 img/logo-light.png
 img/macbook.jpg
@@ -245,6 +251,7 @@ styles/theme-tote.css
 styles/theme-velvet.css
 css/main.css
 css/main.min.css
+css/theme-amber.css
 css/theme-blue.css
 css/theme-business.css
 css/theme-cacao.css
@@ -254,7 +261,6 @@ css/theme-emerald.css
 css/theme-fairsky.css
 css/theme-gumboot.css
 css/theme-olive.css
-css/theme-rose.css
 css/theme-tote.css
 css/theme-velvet.css
 css/theme.css
