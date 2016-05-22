@@ -102,12 +102,11 @@ module.exports = function(app, stormpath) {
         res.renderDebug('full-stack-passion.html');
     });
 	app.get('/make-stuff-go', function(req, res) {
-        res.renderDebug('make-stuff-go.html');
+        res.renderDebug('general-purpose-16.html');
     });
 	app.get('/product-stack', function(req, res) {
         res.renderDebug('experience-is-the-product.html');
     });
-	
 	
 
     // route middleware to make sure a user is logged in
