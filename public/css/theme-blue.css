@@ -940,6 +940,10 @@ nav.dark .navbar {
 nav.dark a {
   color: #fff;
 }
+nav.dark a:hover {
+  color: #0785f2;
+  border-bottom: 1px #0785f2 dashed;
+}
 nav.dark .subnav li a {
   color: #666;
 }
