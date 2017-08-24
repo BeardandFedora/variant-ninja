@@ -9,7 +9,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var stormpath = require('express-stormpath');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -49,10 +48,6 @@ app.use(multer({
 	}
 })); 
 
-
-// Set up the Stormpath application
-require('./stormpath.js')(app, stormpath);
-
 /* It's not quite Project Metosis, but this is going to allow us to
  * serve meta pages (static resources) that are isolated from the core application middleware
  * and all of its dependencies. We also serve the web static pages that are pulling
@@ -64,13 +59,11 @@ app.set('views', __dirname + '/../views');
 // Configure expressjs (ejs) engine, for it will be #awesome for us.
 app.engine('html', require('ejs').renderFile);
 
-
 // Use gzip compression
 app.use(compression());
 
-//connect some custom POST middleware
-//app.post('/exampleMiddleware', require('./example').exampleImport);
-
+// connect some custom POST middleware
+// app.post('/exampleMiddleware', require('./example').exampleImport);
 
 /*
  * Load Variant statically, as new middleware function to serve files from within specified directory
@@ -100,15 +93,14 @@ app.use(function(req, res, next) {
 */
 
 // routes ======================================================================
-require('./routes.js')(app, stormpath); // load our routes and pass in our app and fully configured stormpath
-//require('./routes.js')(app); // load our routes and pass in our app
+require('./routes.js')(app); // load our routes and pass in our app
 
 
 
 /*
  * Load The Virtual Host middleware (via vhosts)
 */
-//var vhost = require('../vhost')(app, express, vhost, stormpath, favicon, path, logger, bodyParser, methodOverride, cookieParser); // load the vhost middlewares
+//var vhost = require('../vhost')(app, express, vhost, favicon, path, logger, bodyParser, methodOverride, cookieParser); // load the vhost middlewares
 
 
 

@@ -1,5 +1,4 @@
-module.exports = function(app, stormpath) {
-//module.exports = function(app) {
+module.exports = function(app) {
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
@@ -8,14 +7,14 @@ module.exports = function(app, stormpath) {
     });
 
 	// Serve builder.html in /build
-	// Let's also lock this down with stormpath, by directory groups
-	//app.get('/build', stormpath.groupsRequired(['Tier 1', 'Tier 2', 'Admin', 'Beta'], false), function(req, res) {
+	/* app.get('/build', stormpath.groupsRequired(['Tier 1', 'Tier 2', 'Admin', 'Beta'], false), function(req, res) {
 	app.get('/build', stormpath.loginRequired, function(req, res) {
     	res.renderDebug('builder.html');
 	});	
 	app.get('/buildr', stormpath.loginRequired, function(req, res) {
     	res.renderDebug('secure-builder.html');
-	});		
+    });	
+    */	
 	
     /* KISS. A keep it simple routing scheme here... forever. This app is intended to
      * be a single page app with meta pages, both of which we can assign routes for.
